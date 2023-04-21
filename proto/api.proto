@@ -1,0 +1,454 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/wrappers.proto";
+message DynamicPillsDetails {
+  int32 min_selections = 1;
+  int32 max_selections = 2;
+  int32 items = 3;
+  StringValue id = 4;
+  StringValue name = 5;
+  StringValue prompt = 6;
+  StringValue row_limit = 7;
+  bool has_carousel = 8;
+  bool num_selections_text = 9;
+  bool prompt_link_text = 10;
+  bool show_results = 11;
+  bool results_title_text = 12;
+  bool results_header_text = 13;
+  bool clear_results_button_text = 14;
+  bool emoji = 15;
+}
+message TextBoxDetails {
+  StringValue header = 1;
+  StringValue text_box_header = 2;
+  StringValue input_text = 3;
+  StringValue text_box_footer = 4;
+  StringValue button_primary_text = 5;
+  StringValue button_secondary_text = 6;
+  StringValue background_text = 7;
+  StringValue selections = 8;
+  StringValue selection_image = 9;
+  bool prompt_with_selection = 10;
+  bool has_custom_selection = 11;
+  bool selected_id = 12;
+  int32 character_limit = 13;
+  int32 selection_list_header = 14;
+}
+message InfoBoxDetails {
+  StringValue header_text = 1;
+  StringValue text = 2;
+  StringValue button_text = 3;
+}
+message AnimationScreenDetails {
+  StringValue header_text = 1;
+  StringValue image_urls = 2;
+  StringValue text = 3;
+}
+message Component {
+  string component_id = 1;
+  string component_type = 2;
+  string actions = 3;
+  oneof details {
+    DynamicPillsDetails dynamic_pills_details = 4;
+    TextBoxDetails text_box_details = 5;
+    InfoBoxDetails info_box_details = 6;
+    AnimationScreenDetails animation_screen_details = 7;
+   }
+}
+message GetContentConfigurationResponseModel {
+  repeated Component content = 1;
+}
+message Phone {
+  string phone = 1;
+  StringValue refresh_token = 2;
+  oneof check {
+    StringValue captcha_token = 3;
+    StringValue ios_device_token = 4;
+    StringValue android_jws = 5;
+   }
+}
+message PhoneOtp {
+  StringValue phone = 1;
+  string otp = 2;
+  string refresh_token = 3;
+}
+message Email {
+  string email = 1;
+  StringValue refresh_token = 2;
+  BoolValue marketing_opt_in = 3;
+}
+message GoogleToken {
+  string external_token = 1;
+  StringValue refresh_token = 2;
+  BoolValue marketing_opt_in = 3;
+  BoolValue user_behavior = 4;
+}
+message EmailOtp {
+  StringValue email = 1;
+  string otp = 2;
+  StringValue refresh_token = 3;
+}
+message FacebookToken {
+  string external_token = 1;
+  StringValue refresh_token = 2;
+}
+message PhoneOtpResend {
+  StringValue phone = 1;
+  StringValue refresh_token = 2;
+  oneof check {
+    StringValue ios_device_token = 3;
+    StringValue android_jws = 4;
+   }
+}
+message EmailOtpResend {
+  StringValue email = 1;
+  StringValue refresh_token = 2;
+}
+message GetInitialState {
+  StringValue refresh_token = 1;
+}
+message RefreshAuth {
+  string refresh_token = 1;
+}
+message AppleToken {
+  string external_token = 1;
+  StringValue refresh_token = 2;
+  StringValue raw_nonce = 3;
+}
+message DismissSocialConnectionList {
+  string refresh_token = 1;
+}
+message EmailMagicLink {
+  string email = 1;
+}
+message EmailMagicLinkOtp {
+  string otp_token = 1;
+}
+message CreateNewAccount {
+  string refresh_token = 1;
+}
+message LineAuthCode {
+  string auth_code = 1;
+}
+message LineOAuthTokens {
+  string access_token = 1;
+  string id_token = 2;
+  string nonce_id = 3;
+}
+message Captcha {
+  string reference_token = 1;
+  string captcha_token = 2;
+}
+message AuthGatewayRequest {
+  oneof factor {
+    Phone phone = 1;
+    PhoneOtp phone_otp = 2;
+    Email email = 3;
+    GoogleToken google_token = 4;
+    EmailOtp email_otp = 5;
+    FacebookToken facebook_token = 6;
+    PhoneOtpResend phone_otp_resend = 7;
+    EmailOtpResend email_otp_resend = 8;
+    GetInitialState get_initial_state = 9;
+    RefreshAuth refresh_auth = 10;
+    AppleToken apple_token = 11;
+    DismissSocialConnectionList dismiss_social_connection_list = 12;
+    EmailMagicLink email_magic_link = 13;
+    EmailMagicLinkOtp email_magic_link_otp = 14;
+    CreateNewAccount create_new_account = 15;
+    LineAuthCode line_auth_code = 16;
+    LineOAuthTokens line_oauth_tokens = 17;
+    Captcha captcha = 18;
+   }
+}
+message MetaProto {
+  Timestamp upstream_time = 1;
+  Timestamp start_time = 2;
+}
+message ErrorProto {
+  int32 code = 1;
+  string message = 2;
+}
+message GetPhoneState {
+  StringValue refresh_token = 1;
+}
+message ValidatePhoneOtpState {
+  StringValue refresh_token = 1;
+  string phone = 2;
+  Int32Value otp_length = 3;
+  BoolValue sms_sent = 4;
+}
+message EmailMarketing {
+  BoolValue show_marketing_opt_in = 2;
+  BoolValue show_strict_opt_in = 3;
+  BoolValue checked_by_default = 4;
+}
+message GetEmailState {
+  StringValue refresh_token = 1;
+  EmailMarketing email_marketing = 2;
+}
+message ValidateEmailOtpState {
+  StringValue refresh_token = 1;
+  oneof email {
+    string unmasked_email = 2;
+    string masked_email = 3;
+  }
+  Int32Value otp_length = 4;
+  BoolValue email_sent = 5;
+  EmailMarketing email_marketing = 6;
+}
+message OnboardingState {
+  string refresh_token = 1;
+  string onboarding_token = 2;
+  StringValue user_id = 3;
+}
+enum LoginResultCaptcha {
+  option allow_alias = true;
+  CAPTCHA_INVALID = 0;
+  CAPTCHA_V1 = 1;
+  CAPTCHA_V2 = 2;
+}
+message LoginResult {
+  string refresh_token = 1;
+  string auth_token = 2;
+  LoginResultCaptcha captcha = 3;
+  string user_id = 4;
+  Int64Value auth_token_ttl = 5;
+}
+message SocialConnectionList {
+  StringValue refresh_token = 1;
+  StringValue connections = 2;
+}
+message AppleAccountNotFound {
+  bool will_link = 1;
+  StringValue refresh_token = 2;
+}
+message ValidateEmailMagicLinkOtpState {
+
+}
+message ValidateFacebookState {
+  StringValue refresh_token = 1;
+  StringValue masked_email = 2;
+}
+message ValidateGoogleState {
+  StringValue refresh_token = 1;
+  StringValue masked_email = 2;
+}
+message FacebookAccountNotFound {
+  StringValue refresh_token = 1;
+  StringValue masked_email = 2;
+}
+message GoogleAccountNotFound {
+  StringValue refresh_token = 1;
+  StringValue masked_email = 2;
+}
+message CaptchaState {
+  string reference_token = 1;
+}
+message AuthGatewayResponse {
+  MetaProto meta = 1;
+  ErrorProto error = 2;
+  oneof data {
+    GetPhoneState get_phone_state = 3;
+    ValidatePhoneOtpState validate_phone_otp_state = 4;
+    GetEmailState get_email_state = 5;
+    ValidateEmailOtpState validate_email_otp_state = 6;
+    OnboardingState onboarding_state = 7;
+    LoginResult login_result = 8;
+    SocialConnectionList social_connection_list = 9;
+    AppleAccountNotFound apple_account_not_found = 10;
+    ValidateEmailMagicLinkOtpState validate_email_magic_link_otp_state = 11;
+    ValidateFacebookState validate_facebook_state = 12;
+    ValidateGoogleState validate_google_state = 13;
+    FacebookAccountNotFound facebook_account_not_found = 14;
+    GoogleAccountNotFound google_account_not_found = 15;
+    CaptchaState captcha_state = 16;
+   }
+}
+message AppEventBatch {
+  StringValue id = 1;
+  StringValue events = 2;
+}
+message EventPublishRequestAttributes {
+  BoolValue should_validate_events = 1;
+}
+message AppEventPublishRequest {
+  AppEventBatch batch = 1;
+  EventPublishRequestAttributes attributes = 2;
+}
+message EventPublishRequestValidationResult {
+  map<string, string> request_validation_messages = 1;
+}
+message EventPublishResponseAttributes {
+  StringValue batch_id = 1;
+  StringValue message = 2;
+  Duration duration = 3;
+  Int64Value count = 5;
+  EventPublishRequestValidationResult validation_result = 6;
+}
+message AppEventPublishResponse {
+  EventPublishResponseAttributes attributes = 1;
+  EventPublishResponseAttributes event_validation_results = 2;
+}
+message CreatePlaceholderRequest {
+  int32 num_pending_media = 1;
+}
+message DeleteMediaRequest {
+  repeated string media_ids = 1;
+}
+message BoundingBox {
+  FloatValue height_pct = 1;
+  FloatValue width_pct = 2;
+  FloatValue x_offset_pct = 3;
+  FloatValue y_offset_pct = 4;
+}
+message CropInfo {
+  BoundingBox algo = 1;
+  BoolValue processed_by_bullseye = 2;
+  BoolValue user = 3;
+  BoolValue user_customized = 4;
+}
+message UpdatePhotoAvatarRequest {
+  string media_id = 1;
+  CropInfo crop_info = 7;
+}
+message Prompt {
+  int32 prompt_version = 1;
+  string prompt_id = 2;
+  string prompt_type = 3;
+  StringValue campaign_id = 4;
+  StringValue answer = 5;
+  StringValue background_image_url = 6;
+  StringValue gradient = 7;
+  StringValue prompt_title = 8;
+}
+message UpdateMediaDetailsRequest {
+  string media_id = 1;
+  CropInfo crop_info = 2;
+  Prompt prompt = 3;
+}
+message OrderMediaRequest {
+  repeated string media_ids = 1;
+}
+enum Reason {
+  option allow_alias = true;
+  BLOCKED = 0;
+  REPORTED = 1;
+}
+message BlockUserRequest {
+  string user_id = 1;
+  Reason reason = 2;
+}
+enum Visibility {
+  option allow_alias = true;
+  VISIBILITY_NOT_APPLICABLE = 0;
+  PUBLIC = 1;
+  INVITE_ONLY = 2;
+}
+message CreateRoomRequest {
+  string room_type = 1;
+  StringValue title = 2;
+  Visibility visibility = 3;
+}
+message Link {
+  string link = 1;
+  string share_text = 2;
+}
+message Room {
+  string room_id = 1;
+  StringValue room_title = 2;
+  StringValue activity_types = 3;
+  StringValue user_counts = 4;
+  StringValue user_details = 5;
+  Timestamp created_at = 6;
+  Link link = 7;
+  Visibility visibility = 8;
+}
+message CreateRoomResponseModel {
+  Room room = 1;
+  Room activities = 2;
+}
+message GetRoomsResponseModel {
+  repeated Room rooms = 1;
+}
+message JoinRoomResponseModel {
+  Room room = 1;
+  Room activities = 2;
+}
+message GetRoomDetailsResponseModel {
+  Room room = 1;
+  Room activities = 2;
+}
+message RoomStatusResponseModel {
+  StringValue host_id = 1;
+  bool is_room_active = 2;
+  bool is_user_active = 3;
+  int32 user_count = 4;
+}
+message RoomMembershipResponseModel {
+  bool are_members = 1;
+}
+message RoomUser {
+  string room_id = 1;
+  int64 user_number = 2;
+}
+message KickUsersResponseModel {
+  repeated RoomUser failed_users = 1;
+}
+message ShareRoomResponseModel {
+  Link link = 1;
+}
+message RoomServiceResponse {
+  ErrorProto error = 1;
+  oneof payload {
+    CreateRoomResponseModel create_room_response_model = 10;
+    GetRoomsResponseModel get_rooms_response_model = 11;
+    JoinRoomResponseModel join_room_response_model = 12;
+    GetRoomDetailsResponseModel get_room_details_response_model = 13;
+    RoomStatusResponseModel room_status_response_model = 14;
+    RoomMembershipResponseModel room_membership_response_model = 15;
+    KickUsersResponseModel kick_users_response_model = 16;
+    ShareRoomResponseModel share_room_response_model = 17;
+   }
+}
+message ReportRoomRequest {
+  Int32Value primary_code = 1;
+  StringValue additional_details = 2;
+}
+message UpdateRoomRequest {
+  StringValue title = 1;
+  Visibility visibility = 2;
+}
+enum TappyContentType {
+  option allow_alias = true;
+  TAPPY_CONTENT_TYPE_INVALID = 0;
+  TAPPY_CONTENT_TYPE_ANTHEM = 1;
+  TAPPY_CONTENT_TYPE_BIO = 2;
+  TAPPY_CONTENT_TYPE_CITY = 3;
+  TAPPY_CONTENT_TYPE_DESCRIPTORS = 4;
+  TAPPY_CONTENT_TYPE_DISTANCE = 5;
+  TAPPY_CONTENT_TYPE_GLOBAL_REC = 6;
+  TAPPY_CONTENT_TYPE_INSTAGRAM = 7;
+  TAPPY_CONTENT_TYPE_JOB = 8;
+  TAPPY_CONTENT_TYPE_PASSIONS = 9;
+  TAPPY_CONTENT_TYPE_SCHOOL = 10;
+  TAPPY_CONTENT_TYPE_SWIPE_SURGE = 11;
+  TAPPY_CONTENT_TYPE_TINDER_U = 12;
+  TAPPY_CONTENT_TYPE_TOP_ARTISTS = 13;
+  TAPPY_CONTENT_TYPE_COLLECTIBLE_SHOWCASE = 14;
+}
+message TappyPage {
+  repeated TappyContentType content = 1;
+}
+message TappyContent {
+  repeated TappyPage tappy_pages = 1;
+}
+message GetTappyContentResponseModel {
+  TappyContent tappy_content = 1;
+}
+message GetUserContactsResponse {
+  MetaProto meta = 1;
+  ErrorProto error = 2;
+  ErrorProto contacts = 3;
+}

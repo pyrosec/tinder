@@ -1,0 +1,1551 @@
+{
+  "nested": {
+    "DynamicPillsDetails": {
+      "fields": {
+        "minSelections": {
+          "type": "int32",
+          "id": 1
+        },
+        "maxSelections": {
+          "type": "int32",
+          "id": 2
+        },
+        "items": {
+          "type": "int32",
+          "id": 3
+        },
+        "id": {
+          "type": "StringValue",
+          "id": 4
+        },
+        "name": {
+          "type": "StringValue",
+          "id": 5
+        },
+        "prompt": {
+          "type": "StringValue",
+          "id": 6
+        },
+        "rowLimit": {
+          "type": "StringValue",
+          "id": 7
+        },
+        "hasCarousel": {
+          "type": "bool",
+          "id": 8
+        },
+        "numSelectionsText": {
+          "type": "bool",
+          "id": 9
+        },
+        "promptLinkText": {
+          "type": "bool",
+          "id": 10
+        },
+        "showResults": {
+          "type": "bool",
+          "id": 11
+        },
+        "resultsTitleText": {
+          "type": "bool",
+          "id": 12
+        },
+        "resultsHeaderText": {
+          "type": "bool",
+          "id": 13
+        },
+        "clearResultsButtonText": {
+          "type": "bool",
+          "id": 14
+        },
+        "emoji": {
+          "type": "bool",
+          "id": 15
+        }
+      }
+    },
+    "TextBoxDetails": {
+      "fields": {
+        "header": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "textBoxHeader": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "inputText": {
+          "type": "StringValue",
+          "id": 3
+        },
+        "textBoxFooter": {
+          "type": "StringValue",
+          "id": 4
+        },
+        "buttonPrimaryText": {
+          "type": "StringValue",
+          "id": 5
+        },
+        "buttonSecondaryText": {
+          "type": "StringValue",
+          "id": 6
+        },
+        "backgroundText": {
+          "type": "StringValue",
+          "id": 7
+        },
+        "selections": {
+          "type": "StringValue",
+          "id": 8
+        },
+        "selectionImage": {
+          "type": "StringValue",
+          "id": 9
+        },
+        "promptWithSelection": {
+          "type": "bool",
+          "id": 10
+        },
+        "hasCustomSelection": {
+          "type": "bool",
+          "id": 11
+        },
+        "selectedId": {
+          "type": "bool",
+          "id": 12
+        },
+        "characterLimit": {
+          "type": "int32",
+          "id": 13
+        },
+        "selectionListHeader": {
+          "type": "int32",
+          "id": 14
+        }
+      }
+    },
+    "InfoBoxDetails": {
+      "fields": {
+        "headerText": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "text": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "buttonText": {
+          "type": "StringValue",
+          "id": 3
+        }
+      }
+    },
+    "AnimationScreenDetails": {
+      "fields": {
+        "headerText": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "imageUrls": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "text": {
+          "type": "StringValue",
+          "id": 3
+        }
+      }
+    },
+    "Component": {
+      "oneofs": {
+        "details": {
+          "oneof": [
+            "dynamicPillsDetails",
+            "textBoxDetails",
+            "infoBoxDetails",
+            "animationScreenDetails"
+          ]
+        }
+      },
+      "fields": {
+        "componentId": {
+          "type": "string",
+          "id": 1
+        },
+        "componentType": {
+          "type": "string",
+          "id": 2
+        },
+        "actions": {
+          "type": "string",
+          "id": 3
+        },
+        "dynamicPillsDetails": {
+          "type": "DynamicPillsDetails",
+          "id": 4
+        },
+        "textBoxDetails": {
+          "type": "TextBoxDetails",
+          "id": 5
+        },
+        "infoBoxDetails": {
+          "type": "InfoBoxDetails",
+          "id": 6
+        },
+        "animationScreenDetails": {
+          "type": "AnimationScreenDetails",
+          "id": 7
+        }
+      }
+    },
+    "GetContentConfigurationResponseModel": {
+      "fields": {
+        "content": {
+          "rule": "repeated",
+          "type": "Component",
+          "id": 1
+        }
+      }
+    },
+    "Phone": {
+      "oneofs": {
+        "check": {
+          "oneof": [
+            "captchaToken",
+            "iosDeviceToken",
+            "androidJws"
+          ]
+        }
+      },
+      "fields": {
+        "phone": {
+          "type": "string",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "captchaToken": {
+          "type": "StringValue",
+          "id": 3
+        },
+        "iosDeviceToken": {
+          "type": "StringValue",
+          "id": 4
+        },
+        "androidJws": {
+          "type": "StringValue",
+          "id": 5
+        }
+      }
+    },
+    "PhoneOtp": {
+      "fields": {
+        "phone": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "otp": {
+          "type": "string",
+          "id": 2
+        },
+        "refreshToken": {
+          "type": "string",
+          "id": 3
+        }
+      }
+    },
+    "Email": {
+      "fields": {
+        "email": {
+          "type": "string",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "marketingOptIn": {
+          "type": "BoolValue",
+          "id": 3
+        }
+      }
+    },
+    "GoogleToken": {
+      "fields": {
+        "externalToken": {
+          "type": "string",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "marketingOptIn": {
+          "type": "BoolValue",
+          "id": 3
+        },
+        "userBehavior": {
+          "type": "BoolValue",
+          "id": 4
+        }
+      }
+    },
+    "EmailOtp": {
+      "fields": {
+        "email": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "otp": {
+          "type": "string",
+          "id": 2
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 3
+        }
+      }
+    },
+    "FacebookToken": {
+      "fields": {
+        "externalToken": {
+          "type": "string",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "PhoneOtpResend": {
+      "oneofs": {
+        "check": {
+          "oneof": [
+            "iosDeviceToken",
+            "androidJws"
+          ]
+        }
+      },
+      "fields": {
+        "phone": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "iosDeviceToken": {
+          "type": "StringValue",
+          "id": 3
+        },
+        "androidJws": {
+          "type": "StringValue",
+          "id": 4
+        }
+      }
+    },
+    "EmailOtpResend": {
+      "fields": {
+        "email": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "GetInitialState": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        }
+      }
+    },
+    "RefreshAuth": {
+      "fields": {
+        "refreshToken": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "AppleToken": {
+      "fields": {
+        "externalToken": {
+          "type": "string",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "rawNonce": {
+          "type": "StringValue",
+          "id": 3
+        }
+      }
+    },
+    "DismissSocialConnectionList": {
+      "fields": {
+        "refreshToken": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "EmailMagicLink": {
+      "fields": {
+        "email": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "EmailMagicLinkOtp": {
+      "fields": {
+        "otpToken": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "CreateNewAccount": {
+      "fields": {
+        "refreshToken": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "LineAuthCode": {
+      "fields": {
+        "authCode": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "LineOAuthTokens": {
+      "fields": {
+        "accessToken": {
+          "type": "string",
+          "id": 1
+        },
+        "idToken": {
+          "type": "string",
+          "id": 2
+        },
+        "nonceId": {
+          "type": "string",
+          "id": 3
+        }
+      }
+    },
+    "Captcha": {
+      "fields": {
+        "referenceToken": {
+          "type": "string",
+          "id": 1
+        },
+        "captchaToken": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "AuthGatewayRequest": {
+      "oneofs": {
+        "factor": {
+          "oneof": [
+            "phone",
+            "phoneOtp",
+            "email",
+            "googleToken",
+            "emailOtp",
+            "facebookToken",
+            "phoneOtpResend",
+            "emailOtpResend",
+            "getInitialState",
+            "refreshAuth",
+            "appleToken",
+            "dismissSocialConnectionList",
+            "emailMagicLink",
+            "emailMagicLinkOtp",
+            "createNewAccount",
+            "lineAuthCode",
+            "lineOauthTokens",
+            "captcha"
+          ]
+        }
+      },
+      "fields": {
+        "phone": {
+          "type": "Phone",
+          "id": 1
+        },
+        "phoneOtp": {
+          "type": "PhoneOtp",
+          "id": 2
+        },
+        "email": {
+          "type": "Email",
+          "id": 3
+        },
+        "googleToken": {
+          "type": "GoogleToken",
+          "id": 4
+        },
+        "emailOtp": {
+          "type": "EmailOtp",
+          "id": 5
+        },
+        "facebookToken": {
+          "type": "FacebookToken",
+          "id": 6
+        },
+        "phoneOtpResend": {
+          "type": "PhoneOtpResend",
+          "id": 7
+        },
+        "emailOtpResend": {
+          "type": "EmailOtpResend",
+          "id": 8
+        },
+        "getInitialState": {
+          "type": "GetInitialState",
+          "id": 9
+        },
+        "refreshAuth": {
+          "type": "RefreshAuth",
+          "id": 10
+        },
+        "appleToken": {
+          "type": "AppleToken",
+          "id": 11
+        },
+        "dismissSocialConnectionList": {
+          "type": "DismissSocialConnectionList",
+          "id": 12
+        },
+        "emailMagicLink": {
+          "type": "EmailMagicLink",
+          "id": 13
+        },
+        "emailMagicLinkOtp": {
+          "type": "EmailMagicLinkOtp",
+          "id": 14
+        },
+        "createNewAccount": {
+          "type": "CreateNewAccount",
+          "id": 15
+        },
+        "lineAuthCode": {
+          "type": "LineAuthCode",
+          "id": 16
+        },
+        "lineOauthTokens": {
+          "type": "LineOAuthTokens",
+          "id": 17
+        },
+        "captcha": {
+          "type": "Captcha",
+          "id": 18
+        }
+      }
+    },
+    "MetaProto": {
+      "fields": {
+        "upstreamTime": {
+          "type": "Timestamp",
+          "id": 1
+        },
+        "startTime": {
+          "type": "Timestamp",
+          "id": 2
+        }
+      }
+    },
+    "ErrorProto": {
+      "fields": {
+        "code": {
+          "type": "int32",
+          "id": 1
+        },
+        "message": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "GetPhoneState": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        }
+      }
+    },
+    "ValidatePhoneOtpState": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "phone": {
+          "type": "string",
+          "id": 2
+        },
+        "otpLength": {
+          "type": "Int32Value",
+          "id": 3
+        },
+        "smsSent": {
+          "type": "BoolValue",
+          "id": 4
+        }
+      }
+    },
+    "EmailMarketing": {
+      "fields": {
+        "showMarketingOptIn": {
+          "type": "BoolValue",
+          "id": 2
+        },
+        "showStrictOptIn": {
+          "type": "BoolValue",
+          "id": 3
+        },
+        "checkedByDefault": {
+          "type": "BoolValue",
+          "id": 4
+        }
+      }
+    },
+    "GetEmailState": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "emailMarketing": {
+          "type": "EmailMarketing",
+          "id": 2
+        }
+      }
+    },
+    "ValidateEmailOtpState": {
+      "oneofs": {
+        "email": {
+          "oneof": [
+            "unmaskedEmail",
+            "maskedEmail"
+          ]
+        }
+      },
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "unmaskedEmail": {
+          "type": "string",
+          "id": 2
+        },
+        "maskedEmail": {
+          "type": "string",
+          "id": 3
+        },
+        "otpLength": {
+          "type": "Int32Value",
+          "id": 4
+        },
+        "emailSent": {
+          "type": "BoolValue",
+          "id": 5
+        },
+        "emailMarketing": {
+          "type": "EmailMarketing",
+          "id": 6
+        }
+      }
+    },
+    "OnboardingState": {
+      "fields": {
+        "refreshToken": {
+          "type": "string",
+          "id": 1
+        },
+        "onboardingToken": {
+          "type": "string",
+          "id": 2
+        },
+        "userId": {
+          "type": "StringValue",
+          "id": 3
+        }
+      }
+    },
+    "LoginResultCaptcha": {
+      "options": {
+        "allow_alias": true
+      },
+      "values": {
+        "CAPTCHA_INVALID": 0,
+        "CAPTCHA_V1": 1,
+        "CAPTCHA_V2": 2
+      }
+    },
+    "LoginResult": {
+      "fields": {
+        "refreshToken": {
+          "type": "string",
+          "id": 1
+        },
+        "authToken": {
+          "type": "string",
+          "id": 2
+        },
+        "captcha": {
+          "type": "LoginResultCaptcha",
+          "id": 3
+        },
+        "userId": {
+          "type": "string",
+          "id": 4
+        },
+        "authTokenTtl": {
+          "type": "Int64Value",
+          "id": 5
+        }
+      }
+    },
+    "SocialConnectionList": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "connections": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "AppleAccountNotFound": {
+      "fields": {
+        "willLink": {
+          "type": "bool",
+          "id": 1
+        },
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "ValidateEmailMagicLinkOtpState": {
+      "fields": {}
+    },
+    "ValidateFacebookState": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "maskedEmail": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "ValidateGoogleState": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "maskedEmail": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "FacebookAccountNotFound": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "maskedEmail": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "GoogleAccountNotFound": {
+      "fields": {
+        "refreshToken": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "maskedEmail": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "CaptchaState": {
+      "fields": {
+        "referenceToken": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "AuthGatewayResponse": {
+      "oneofs": {
+        "data": {
+          "oneof": [
+            "getPhoneState",
+            "validatePhoneOtpState",
+            "getEmailState",
+            "validateEmailOtpState",
+            "onboardingState",
+            "loginResult",
+            "socialConnectionList",
+            "appleAccountNotFound",
+            "validateEmailMagicLinkOtpState",
+            "validateFacebookState",
+            "validateGoogleState",
+            "facebookAccountNotFound",
+            "googleAccountNotFound",
+            "captchaState"
+          ]
+        }
+      },
+      "fields": {
+        "meta": {
+          "type": "MetaProto",
+          "id": 1
+        },
+        "error": {
+          "type": "ErrorProto",
+          "id": 2
+        },
+        "getPhoneState": {
+          "type": "GetPhoneState",
+          "id": 3
+        },
+        "validatePhoneOtpState": {
+          "type": "ValidatePhoneOtpState",
+          "id": 4
+        },
+        "getEmailState": {
+          "type": "GetEmailState",
+          "id": 5
+        },
+        "validateEmailOtpState": {
+          "type": "ValidateEmailOtpState",
+          "id": 6
+        },
+        "onboardingState": {
+          "type": "OnboardingState",
+          "id": 7
+        },
+        "loginResult": {
+          "type": "LoginResult",
+          "id": 8
+        },
+        "socialConnectionList": {
+          "type": "SocialConnectionList",
+          "id": 9
+        },
+        "appleAccountNotFound": {
+          "type": "AppleAccountNotFound",
+          "id": 10
+        },
+        "validateEmailMagicLinkOtpState": {
+          "type": "ValidateEmailMagicLinkOtpState",
+          "id": 11
+        },
+        "validateFacebookState": {
+          "type": "ValidateFacebookState",
+          "id": 12
+        },
+        "validateGoogleState": {
+          "type": "ValidateGoogleState",
+          "id": 13
+        },
+        "facebookAccountNotFound": {
+          "type": "FacebookAccountNotFound",
+          "id": 14
+        },
+        "googleAccountNotFound": {
+          "type": "GoogleAccountNotFound",
+          "id": 15
+        },
+        "captchaState": {
+          "type": "CaptchaState",
+          "id": 16
+        }
+      }
+    },
+    "AppEventBatch": {
+      "fields": {
+        "id": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "events": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "EventPublishRequestAttributes": {
+      "fields": {
+        "shouldValidateEvents": {
+          "type": "BoolValue",
+          "id": 1
+        }
+      }
+    },
+    "AppEventPublishRequest": {
+      "fields": {
+        "batch": {
+          "type": "AppEventBatch",
+          "id": 1
+        },
+        "attributes": {
+          "type": "EventPublishRequestAttributes",
+          "id": 2
+        }
+      }
+    },
+    "EventPublishRequestValidationResult": {
+      "fields": {
+        "requestValidationMessages": {
+          "keyType": "string",
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "EventPublishResponseAttributes": {
+      "fields": {
+        "batchId": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "message": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "duration": {
+          "type": "Duration",
+          "id": 3
+        },
+        "count": {
+          "type": "Int64Value",
+          "id": 5
+        },
+        "validationResult": {
+          "type": "EventPublishRequestValidationResult",
+          "id": 6
+        }
+      }
+    },
+    "AppEventPublishResponse": {
+      "fields": {
+        "attributes": {
+          "type": "EventPublishResponseAttributes",
+          "id": 1
+        },
+        "eventValidationResults": {
+          "type": "EventPublishResponseAttributes",
+          "id": 2
+        }
+      }
+    },
+    "CreatePlaceholderRequest": {
+      "fields": {
+        "numPendingMedia": {
+          "type": "int32",
+          "id": 1
+        }
+      }
+    },
+    "DeleteMediaRequest": {
+      "fields": {
+        "mediaIds": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "BoundingBox": {
+      "fields": {
+        "heightPct": {
+          "type": "FloatValue",
+          "id": 1
+        },
+        "widthPct": {
+          "type": "FloatValue",
+          "id": 2
+        },
+        "xOffsetPct": {
+          "type": "FloatValue",
+          "id": 3
+        },
+        "yOffsetPct": {
+          "type": "FloatValue",
+          "id": 4
+        }
+      }
+    },
+    "CropInfo": {
+      "fields": {
+        "algo": {
+          "type": "BoundingBox",
+          "id": 1
+        },
+        "processedByBullseye": {
+          "type": "BoolValue",
+          "id": 2
+        },
+        "user": {
+          "type": "BoolValue",
+          "id": 3
+        },
+        "userCustomized": {
+          "type": "BoolValue",
+          "id": 4
+        }
+      }
+    },
+    "UpdatePhotoAvatarRequest": {
+      "fields": {
+        "mediaId": {
+          "type": "string",
+          "id": 1
+        },
+        "cropInfo": {
+          "type": "CropInfo",
+          "id": 7
+        }
+      }
+    },
+    "Prompt": {
+      "fields": {
+        "promptVersion": {
+          "type": "int32",
+          "id": 1
+        },
+        "promptId": {
+          "type": "string",
+          "id": 2
+        },
+        "promptType": {
+          "type": "string",
+          "id": 3
+        },
+        "campaignId": {
+          "type": "StringValue",
+          "id": 4
+        },
+        "answer": {
+          "type": "StringValue",
+          "id": 5
+        },
+        "backgroundImageUrl": {
+          "type": "StringValue",
+          "id": 6
+        },
+        "gradient": {
+          "type": "StringValue",
+          "id": 7
+        },
+        "promptTitle": {
+          "type": "StringValue",
+          "id": 8
+        }
+      }
+    },
+    "UpdateMediaDetailsRequest": {
+      "fields": {
+        "mediaId": {
+          "type": "string",
+          "id": 1
+        },
+        "cropInfo": {
+          "type": "CropInfo",
+          "id": 2
+        },
+        "prompt": {
+          "type": "Prompt",
+          "id": 3
+        }
+      }
+    },
+    "OrderMediaRequest": {
+      "fields": {
+        "mediaIds": {
+          "rule": "repeated",
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "Reason": {
+      "options": {
+        "allow_alias": true
+      },
+      "values": {
+        "BLOCKED": 0,
+        "REPORTED": 1
+      }
+    },
+    "BlockUserRequest": {
+      "fields": {
+        "userId": {
+          "type": "string",
+          "id": 1
+        },
+        "reason": {
+          "type": "Reason",
+          "id": 2
+        }
+      }
+    },
+    "Visibility": {
+      "options": {
+        "allow_alias": true
+      },
+      "values": {
+        "VISIBILITY_NOT_APPLICABLE": 0,
+        "PUBLIC": 1,
+        "INVITE_ONLY": 2
+      }
+    },
+    "CreateRoomRequest": {
+      "fields": {
+        "roomType": {
+          "type": "string",
+          "id": 1
+        },
+        "title": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "visibility": {
+          "type": "Visibility",
+          "id": 3
+        }
+      }
+    },
+    "Link": {
+      "fields": {
+        "link": {
+          "type": "string",
+          "id": 1
+        },
+        "shareText": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "Room": {
+      "fields": {
+        "roomId": {
+          "type": "string",
+          "id": 1
+        },
+        "roomTitle": {
+          "type": "StringValue",
+          "id": 2
+        },
+        "activityTypes": {
+          "type": "StringValue",
+          "id": 3
+        },
+        "userCounts": {
+          "type": "StringValue",
+          "id": 4
+        },
+        "userDetails": {
+          "type": "StringValue",
+          "id": 5
+        },
+        "createdAt": {
+          "type": "Timestamp",
+          "id": 6
+        },
+        "link": {
+          "type": "Link",
+          "id": 7
+        },
+        "visibility": {
+          "type": "Visibility",
+          "id": 8
+        }
+      }
+    },
+    "CreateRoomResponseModel": {
+      "fields": {
+        "room": {
+          "type": "Room",
+          "id": 1
+        },
+        "activities": {
+          "type": "Room",
+          "id": 2
+        }
+      }
+    },
+    "GetRoomsResponseModel": {
+      "fields": {
+        "rooms": {
+          "rule": "repeated",
+          "type": "Room",
+          "id": 1
+        }
+      }
+    },
+    "JoinRoomResponseModel": {
+      "fields": {
+        "room": {
+          "type": "Room",
+          "id": 1
+        },
+        "activities": {
+          "type": "Room",
+          "id": 2
+        }
+      }
+    },
+    "GetRoomDetailsResponseModel": {
+      "fields": {
+        "room": {
+          "type": "Room",
+          "id": 1
+        },
+        "activities": {
+          "type": "Room",
+          "id": 2
+        }
+      }
+    },
+    "RoomStatusResponseModel": {
+      "fields": {
+        "hostId": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "isRoomActive": {
+          "type": "bool",
+          "id": 2
+        },
+        "isUserActive": {
+          "type": "bool",
+          "id": 3
+        },
+        "userCount": {
+          "type": "int32",
+          "id": 4
+        }
+      }
+    },
+    "RoomMembershipResponseModel": {
+      "fields": {
+        "areMembers": {
+          "type": "bool",
+          "id": 1
+        }
+      }
+    },
+    "RoomUser": {
+      "fields": {
+        "roomId": {
+          "type": "string",
+          "id": 1
+        },
+        "userNumber": {
+          "type": "int64",
+          "id": 2
+        }
+      }
+    },
+    "KickUsersResponseModel": {
+      "fields": {
+        "failedUsers": {
+          "rule": "repeated",
+          "type": "RoomUser",
+          "id": 1
+        }
+      }
+    },
+    "ShareRoomResponseModel": {
+      "fields": {
+        "link": {
+          "type": "Link",
+          "id": 1
+        }
+      }
+    },
+    "RoomServiceResponse": {
+      "oneofs": {
+        "payload": {
+          "oneof": [
+            "createRoomResponseModel",
+            "getRoomsResponseModel",
+            "joinRoomResponseModel",
+            "getRoomDetailsResponseModel",
+            "roomStatusResponseModel",
+            "roomMembershipResponseModel",
+            "kickUsersResponseModel",
+            "shareRoomResponseModel"
+          ]
+        }
+      },
+      "fields": {
+        "error": {
+          "type": "ErrorProto",
+          "id": 1
+        },
+        "createRoomResponseModel": {
+          "type": "CreateRoomResponseModel",
+          "id": 10
+        },
+        "getRoomsResponseModel": {
+          "type": "GetRoomsResponseModel",
+          "id": 11
+        },
+        "joinRoomResponseModel": {
+          "type": "JoinRoomResponseModel",
+          "id": 12
+        },
+        "getRoomDetailsResponseModel": {
+          "type": "GetRoomDetailsResponseModel",
+          "id": 13
+        },
+        "roomStatusResponseModel": {
+          "type": "RoomStatusResponseModel",
+          "id": 14
+        },
+        "roomMembershipResponseModel": {
+          "type": "RoomMembershipResponseModel",
+          "id": 15
+        },
+        "kickUsersResponseModel": {
+          "type": "KickUsersResponseModel",
+          "id": 16
+        },
+        "shareRoomResponseModel": {
+          "type": "ShareRoomResponseModel",
+          "id": 17
+        }
+      }
+    },
+    "ReportRoomRequest": {
+      "fields": {
+        "primaryCode": {
+          "type": "Int32Value",
+          "id": 1
+        },
+        "additionalDetails": {
+          "type": "StringValue",
+          "id": 2
+        }
+      }
+    },
+    "UpdateRoomRequest": {
+      "fields": {
+        "title": {
+          "type": "StringValue",
+          "id": 1
+        },
+        "visibility": {
+          "type": "Visibility",
+          "id": 2
+        }
+      }
+    },
+    "TappyContentType": {
+      "options": {
+        "allow_alias": true
+      },
+      "values": {
+        "TAPPY_CONTENT_TYPE_INVALID": 0,
+        "TAPPY_CONTENT_TYPE_ANTHEM": 1,
+        "TAPPY_CONTENT_TYPE_BIO": 2,
+        "TAPPY_CONTENT_TYPE_CITY": 3,
+        "TAPPY_CONTENT_TYPE_DESCRIPTORS": 4,
+        "TAPPY_CONTENT_TYPE_DISTANCE": 5,
+        "TAPPY_CONTENT_TYPE_GLOBAL_REC": 6,
+        "TAPPY_CONTENT_TYPE_INSTAGRAM": 7,
+        "TAPPY_CONTENT_TYPE_JOB": 8,
+        "TAPPY_CONTENT_TYPE_PASSIONS": 9,
+        "TAPPY_CONTENT_TYPE_SCHOOL": 10,
+        "TAPPY_CONTENT_TYPE_SWIPE_SURGE": 11,
+        "TAPPY_CONTENT_TYPE_TINDER_U": 12,
+        "TAPPY_CONTENT_TYPE_TOP_ARTISTS": 13,
+        "TAPPY_CONTENT_TYPE_COLLECTIBLE_SHOWCASE": 14
+      }
+    },
+    "TappyPage": {
+      "fields": {
+        "content": {
+          "rule": "repeated",
+          "type": "TappyContentType",
+          "id": 1
+        }
+      }
+    },
+    "TappyContent": {
+      "fields": {
+        "tappyPages": {
+          "rule": "repeated",
+          "type": "TappyPage",
+          "id": 1
+        }
+      }
+    },
+    "GetTappyContentResponseModel": {
+      "fields": {
+        "tappyContent": {
+          "type": "TappyContent",
+          "id": 1
+        }
+      }
+    },
+    "GetUserContactsResponse": {
+      "fields": {
+        "meta": {
+          "type": "MetaProto",
+          "id": 1
+        },
+        "error": {
+          "type": "ErrorProto",
+          "id": 2
+        },
+        "contacts": {
+          "type": "ErrorProto",
+          "id": 3
+        }
+      }
+    },
+    "google": {
+      "nested": {
+        "protobuf": {
+          "nested": {
+            "Timestamp": {
+              "fields": {
+                "seconds": {
+                  "type": "int64",
+                  "id": 1
+                },
+                "nanos": {
+                  "type": "int32",
+                  "id": 2
+                }
+              }
+            },
+            "Duration": {
+              "fields": {
+                "seconds": {
+                  "type": "int64",
+                  "id": 1
+                },
+                "nanos": {
+                  "type": "int32",
+                  "id": 2
+                }
+              }
+            },
+            "DoubleValue": {
+              "fields": {
+                "value": {
+                  "type": "double",
+                  "id": 1
+                }
+              }
+            },
+            "FloatValue": {
+              "fields": {
+                "value": {
+                  "type": "float",
+                  "id": 1
+                }
+              }
+            },
+            "Int64Value": {
+              "fields": {
+                "value": {
+                  "type": "int64",
+                  "id": 1
+                }
+              }
+            },
+            "UInt64Value": {
+              "fields": {
+                "value": {
+                  "type": "uint64",
+                  "id": 1
+                }
+              }
+            },
+            "Int32Value": {
+              "fields": {
+                "value": {
+                  "type": "int32",
+                  "id": 1
+                }
+              }
+            },
+            "UInt32Value": {
+              "fields": {
+                "value": {
+                  "type": "uint32",
+                  "id": 1
+                }
+              }
+            },
+            "BoolValue": {
+              "fields": {
+                "value": {
+                  "type": "bool",
+                  "id": 1
+                }
+              }
+            },
+            "StringValue": {
+              "fields": {
+                "value": {
+                  "type": "string",
+                  "id": 1
+                }
+              }
+            },
+            "BytesValue": {
+              "fields": {
+                "value": {
+                  "type": "bytes",
+                  "id": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
