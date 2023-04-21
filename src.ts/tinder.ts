@@ -1,5 +1,5 @@
 import { v1 } from "uuid";
-import fingerprints from "@upwife/fingerprints";
+import fingerprints from "android-fingerprints";
 import crypto from "crypto";
 import FormData from "form-data";
 import fs from "fs";
