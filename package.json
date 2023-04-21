@@ -16,8 +16,8 @@
     "analyze-tinder": "./bin/analyze-tinder.js"
   },
   "main": "lib/index.js",
-  "repository": "https://git.pyrosec.gg/project-ghost/tinder",
-  "author": "project-ghost",
+  "repository": "https://github.com/pyrosec/tinder",
+  "author": "pyrosec",
   "license": "MIT",
   "private": false,
   "dependencies": {
