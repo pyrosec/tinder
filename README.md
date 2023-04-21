@@ -8,7 +8,7 @@ Protobuf schemas necessary for communicating with the Tinder API are reversed pr
 
 For most applications built with protobuf, we find that a .proto file can almost always be extracted using parser/generators similar to ones included here.
 
-Similarly, the JSON API schema was reversed into TypeScript interface definitions, and the HTTP route definitions extracted from DEx labels associated with retrofit2.
+Similarly, the JSON API schema was reversed into TypeScript interface definitions, and the HTTP route definitions extracted from DEX labels associated with retrofit2.
 
 To ease the task of replicating a generic API call, frida was used to remove CA pinning using standard CA-unpinning scripts, then network requests captured from a victim Android system.
 
