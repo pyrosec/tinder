@@ -53,7 +53,7 @@ Automatch
 
 ```sh
 tinder automatch
-```sh
+```
 
 Scrape profiles
 
