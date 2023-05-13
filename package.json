@@ -1,5 +1,5 @@
 {
-  "name": "@upwife/tinder",
+  "name": "tinder",
   "version": "0.1.0",
   "description": "tinder API client",
   "scripts": {
