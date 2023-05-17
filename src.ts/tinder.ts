@@ -1144,13 +1144,12 @@ export class TinderClient {
   }
 
   async checkIp() {
-    //console.log(this.proxyOptions)
-    //console.log (new SocksProxyAgent(this.proxyOptions))
-    const response = await fetch("https://api64.ipify.org", {
+    const response = await fetch("https://api64.ipify.org?format=json", {
       agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
       method: "GET",
     });
-    return await response.text();
+    const { ip } = await response.json();
+    return ip;
   }
   async verifyEmail({ otp }) {
     const response = await this._call(
