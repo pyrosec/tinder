@@ -2333,7 +2333,7 @@ export class TinderClient {
       agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
       compress: true
     });
-    return await response.json();
+    return await response;
   }
   async fastMatchSecretAdmirer(o: any): Promise<ISecretAdmirerResponse> {
     const response = await this._call(
@@ -2595,7 +2595,7 @@ export class TinderClient {
       { method: "POST", body: JSON.stringify(o) }
     );
     
-    return await response.json();
+    return await response;
   }
   async passportUserPrecheck(o: any): Promise<IDataResponse> {
     const response = await this._call(
