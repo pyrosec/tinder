@@ -1,5 +1,6 @@
 import { TinderClient } from "./tinder";
 import { camelCase } from "change-case";
+import { parseInstagram } from "virgeux"
 import fs from "fs-extra";
 import util from "util";
 import url from "url";
@@ -138,6 +139,10 @@ export async function scrapeProfiles(destination: string) {
       continue;
     }
     for (const result of (response.data.results || [])) {
+      const ig = parseInstagram(result.user.bio);
+      if (ig) {
+        await fs.writeFile(result.user._id + '<IG>' + '.json', JSON.stringify(result, null, 2));
+      }
       await fs.writeFile(result.user._id + '.json', JSON.stringify(result, null, 2));
       const urls = result.user.photos.map((v) => v.url);
       let i = 0;
