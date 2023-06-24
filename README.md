@@ -31,7 +31,7 @@ tinder verify-otp --phone-number 19701823918 --otp 858192
 tinder use-email --email testemail@gmail.com
 tinder start-onboarding
 tinder set-name --name 'Dave'
-tinder set-birth-date --birth-date '01-02-1996'
+tinder set-birth-date --birth-date '1996-01-02'
 tinder set-gender --gender 0
 tinder set-interested-in-gender --gender 1
 tinder set-school --school-id ope_350031 --name 'New York University' --displayed

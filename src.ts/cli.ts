@@ -64,7 +64,6 @@ export async function loadSession() {
   const proxyOptions = await loadProxy();
   const tinder = TinderClient.fromJSON(await fs.readFile(path.join(process.env.HOME, '.tinder', 'session.json')));
   tinder.proxyOptions = proxyOptions;
-  console.log(tinder)
   return tinder;
 }
 
@@ -159,7 +158,6 @@ export async function scrapeProfiles(destination: string) {
   for (;; i++) {
     await new Promise((resolve) => setTimeout(resolve, 500+Math.floor(Math.random()*1000)));
     const response: any = await tinder.recsCore({});
-    console.log(require('util').inspect(response, { depth: 15, colors: true }));
     if (response.data.timeout) {
       await new Promise((resolve) => setTimeout(resolve, 10000));
       i--;
@@ -168,9 +166,9 @@ export async function scrapeProfiles(destination: string) {
     for (const result of (response.data.results || [])) {
       const ig = parseInstagram(result.user.bio);
       if (ig) {
-        await fs.writeFile(result.user._id + '<IG>' + '.json', JSON.stringify(result, null, 2));
+        const split = ig.split('/');
+	console.log(split[split.length - 1]);
       }
-      await fs.writeFile(result.user._id + '.json', JSON.stringify(result, null, 2));
       const urls = result.user.photos.map((v) => v.url);
       let i = 0;
       /*
@@ -198,7 +196,6 @@ export async function automatch() {
   for (;; i++) {
     await new Promise((resolve) => setTimeout(resolve, 500+Math.floor(Math.random()*1000)));
     const response: any = await tinder.recsCore({});
-    console.log(require('util').inspect(response, { depth: 15, colors: true }));
     if (response.data.timeout) {
       await new Promise((resolve) => setTimeout(resolve, 10000));
       i--;
