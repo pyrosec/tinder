@@ -35,6 +35,7 @@
     "setimmediate": "^1.0.5",
     "socks-proxy-agent": "^7.0.0",
     "uuid": "^9.0.0",
+    "virgeux": "https://github.com/pyrosec/virgeux",
     "winston": "^3.8.2",
     "yargs": "^17.6.2"
   },
