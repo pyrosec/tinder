@@ -1,6 +1,9 @@
 import { TinderClient } from "./tinder";
 import "setimmediate";
 export declare function saveSession(tinder: any, json?: boolean, filename?: string): Promise<void>;
+export declare const parseProfile: (regex: any, urlPrefix: any, bio: any) => any;
+export declare const parseInstagram: any;
+export declare const parseSnapchat: any;
 export declare function initSession(): Promise<void>;
 export declare function loadSession(): Promise<TinderClient>;
 export declare function setProxy(proxyUri: string): Promise<void>;

@@ -1,6 +1,5 @@
 import { TinderClient } from "./tinder";
 import { camelCase } from "change-case";
-import { parseInstagram } from "virgeux"
 import fs from "fs-extra";
 import util from "util";
 import url from "url";
@@ -18,6 +17,34 @@ export async function saveSession(tinder, json = false, filename = 'session.json
   await fs.writeFile(path.join(process.env.HOME, '.tinder', filename), tinder.toJSON());
   if (!json) logger.info('saved to ~/' + path.join('.tinder', filename));
 }
+
+
+export const parseProfile = (regex, urlPrefix, bio) => {
+  const found = bio
+    .trim()
+    .split(/[\s\n:]/)
+    .map((v) => v.trim())
+    .filter((v) => !["-", ":"].includes(v))
+    .filter(Boolean)
+    .find((v, i, ary) => v[0] === "@" || (i > 0 && ary[i - 1].match(regex)));
+  if (!found) return null;
+  const replaced = found.replace("@", "");
+  const isValid = replaced.match(/^[\._\w]+$/);
+  if (!isValid || replaced.length < 5) return null;
+  return urlPrefix + replaced;
+};
+
+export const parseInstagram = parseProfile.bind(
+  null,
+  /(?:^ig$|^insta|📷)/i,
+  "https://instagram.com/"
+);
+
+export const parseSnapchat = parseProfile.bind(
+  null,
+  /(?:^sc$|^snap|👻)/i,
+  "https://www.snapchat.com/add/"
+);
   
 
 export async function initSession() {
