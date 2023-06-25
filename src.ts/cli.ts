@@ -158,7 +158,8 @@ export async function scrapeProfiles(destination: string) {
   for (;; i++) {
     await new Promise((resolve) => setTimeout(resolve, 500+Math.floor(Math.random()*1000)));
     const response: any = await tinder.recsCore({});
-    if (response.data.timeout) {
+	  console.log(response);
+    if (response?.data?.timeout) {
       await new Promise((resolve) => setTimeout(resolve, 10000));
       i--;
       continue;
