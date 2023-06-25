@@ -157,7 +157,7 @@ export async function scrapeProfiles(destination: string) {
   let i = Math.max(...files.map((v) => Number((v.match(/\d+/) || [0])[0])));
   for (;; i++) {
     await new Promise((resolve) => setTimeout(resolve, 500+Math.floor(Math.random()*1000)));
-    const response: any = await tinder.recsCore({});
+    const response: any = await (await tinder.recsCore({}) as any).json();
     if (response.data.timeout) {
       await new Promise((resolve) => setTimeout(resolve, 10000));
       i--;
@@ -166,8 +166,7 @@ export async function scrapeProfiles(destination: string) {
     for (const result of (response.data.results || [])) {
       const ig = parseInstagram(result.user.bio);
       if (ig) {
-        const split = ig.split('/');
-	console.log(split[split.length - 1]);
+	console.log(ig);
       }
       const urls = result.user.photos.map((v) => v.url);
       let i = 0;
@@ -195,8 +194,8 @@ export async function automatch() {
   let i = 0;
   for (;; i++) {
     await new Promise((resolve) => setTimeout(resolve, 500+Math.floor(Math.random()*1000)));
-    const response: any = await tinder.recsCore({});
-    if (response.data.timeout) {
+    const response: any = await (await tinder.recsCore({}) as any).json();
+    if ((response.data || {}).timeout) {
       await new Promise((resolve) => setTimeout(resolve, 10000));
       i--;
       continue;

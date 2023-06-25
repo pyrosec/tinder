@@ -1144,7 +1144,7 @@ export class TinderClient {
   }
 
   async checkIp() {
-    const response = await fetch("https://api64.ipify.org?format=json", {
+    const response: any = await fetch("https://api64.ipify.org?format=json", {
       agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
       method: "GET",
     });
@@ -1775,7 +1775,7 @@ export class TinderClient {
     );
     return await response.json();
   }
-  async meta(o: IMetaRequestBody): Promise<IMetaDataResponse> {
+  async meta(o: IMetaRequestBody): Promise<any> {
     let payload;
     if (!Object.keys(o).length) payload = {
       force_fetch_resources: true,
@@ -1796,7 +1796,7 @@ export class TinderClient {
         'content-type': 'application/json; charset=UTF-8'
       }
     });
-    return await response;
+    return response;
   }
   async matchmakerRegistration(
     o: IMMRegistrationRequest

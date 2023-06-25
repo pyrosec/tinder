@@ -163,9 +163,6 @@ interface IMetaRequestBody {
     lon?: number;
     forceFetchResources?: boolean;
 }
-interface IMetaDataResponse {
-    data?: string;
-}
 interface IMMRegistrationRequest {
 }
 interface IMMSessionRegistrationResponse {
@@ -697,7 +694,7 @@ export declare class TinderClient {
     getAppSessionTimeElapsed(): number;
     getUserSessionTimeElapsed(): number;
     assignDecodedValues(response: any): void;
-    _call(url: any, config?: any): Promise<any>;
+    _call(url: any, config?: any): Promise<import("node-fetch").Response>;
     authLogin({ phoneNumber }: {
         phoneNumber: any;
     }): Promise<any>;
@@ -710,37 +707,37 @@ export declare class TinderClient {
     verifyEmail({ otp }: {
         otp: any;
     }): Promise<any>;
-    pushDevices(): Promise<any>;
-    profileData(): Promise<any>;
-    getMatches(): Promise<any>;
+    pushDevices(): Promise<unknown>;
+    profileData(): Promise<string>;
+    getMatches(): Promise<string>;
     useEmail({ email }: {
         email: any;
     }): Promise<any>;
-    startOnboarding(): Promise<any>;
+    startOnboarding(): Promise<unknown>;
     setName({ name }: {
         name: any;
-    }): Promise<any>;
+    }): Promise<unknown>;
     setBirthDate({ birthDate }: {
         birthDate: any;
-    }): Promise<any>;
+    }): Promise<unknown>;
     setGender({ gender }: {
         gender: any;
-    }): Promise<any>;
+    }): Promise<unknown>;
     setInterestedInGender({ gender }: {
         gender: any;
-    }): Promise<any>;
+    }): Promise<unknown>;
     setSchool({ schoolId, name, displayed }: {
         schoolId: any;
         name: any;
         displayed: any;
-    }): Promise<any>;
+    }): Promise<unknown>;
     photo({ data }: {
         data: any;
-    }): Promise<any>;
+    }): Promise<unknown>;
     setInterests({ interests }: {
         interests: any;
-    }): Promise<any>;
-    healthCheckAuth(): Promise<any>;
+    }): Promise<unknown>;
+    healthCheckAuth(): Promise<unknown>;
     static fromObject(o: any): TinderClient;
     toObject(): {
         userId: string;
@@ -812,7 +809,7 @@ export declare class TinderClient {
     mediaSubmit(o: IMultipartBodyPart): Promise<ISubmittedMediaUploadResponse>;
     suggestions(o: any): Promise<IApiMessageSuggestionsResponse>;
     messageSuggestions(o: any): Promise<IApiMessageSuggestionsResponse>;
-    meta(o: IMetaRequestBody): Promise<IMetaDataResponse>;
+    meta(o: IMetaRequestBody): Promise<any>;
     matchmakerRegistration(o: IMMRegistrationRequest): Promise<IMMSessionRegistrationResponse>;
     profileMutuals(o: any): Promise<IMutualsProfileResponse>;
     profileIncludeUser(o: any): Promise<IMutualsSettingsResponse>;
@@ -871,7 +868,7 @@ export declare class TinderClient {
     purchaseDiscountEligibility(o: any): Promise<IDataResponse>;
     profileTutorials(o: any): Promise<any>;
     profileSpotifySync(o: IConnectSpotifyRequest): Promise<IDataResponse>;
-    readreceiptMatchId(o: any): Promise<any>;
+    readreceiptMatchId(o: any): Promise<import("node-fetch").Response>;
     exploreRecs(o: any): Promise<ICuratedRecsResponse>;
     purchaseDiscountSponsoredMessage(o: any): Promise<IDataResponse>;
     fastMatchCount(o: any): Promise<IFastMatchCountResponse>;
@@ -938,14 +935,14 @@ export declare class TinderClient {
     giphyTrending(o: any): Promise<IGiphyApiResponse>;
     tenorTrending(o: any): Promise<ITenorApiResponse>;
     profileConsentsMessage(o: IMessageConsentRequestBody): Promise<IMessageConsentResponse>;
-    profileUser(o: IOnlinePresenceSettingsUpdateRequestBody): Promise<any>;
+    profileUser(o: IOnlinePresenceSettingsUpdateRequestBody): Promise<import("node-fetch").Response>;
     profileSchool(o: IUpdateSchoolRequestBody): Promise<IUpdateSchoolResponse>;
     profileTinderu(o: ITinderUProfileRequestBody): Promise<ITinderUResponse>;
     promosValidate(o: IPurchasePromotionsValidateRequest): Promise<IPurchasePromotionsValidateResponse>;
     purchaseAndroid(o: any): Promise<any>;
     tinderuVerify(o: IVerifyRequest): Promise<ITinderUResponse>;
     healthcheckAuth(o: any): Promise<IHealthcheckResponse>;
-    challengeVerify(o: IChallengeAnswerVerificationRequest): Promise<any>;
+    challengeVerify(o: IChallengeAnswerVerificationRequest): Promise<import("node-fetch").Response>;
     verificationUnderageState(o: any): Promise<IDataResponse>;
     verificationUnderageUrl(o: any): Promise<IVerificationUrlResponse>;
     boostResult(o: any): Promise<any>;
