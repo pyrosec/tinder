@@ -694,7 +694,7 @@ export declare class TinderClient {
     getAppSessionTimeElapsed(): number;
     getUserSessionTimeElapsed(): number;
     assignDecodedValues(response: any): void;
-    _call(url: any, config?: any): Promise<import("node-fetch").Response>;
+    _call(url: any, config?: any): Promise<any>;
     authLogin({ phoneNumber }: {
         phoneNumber: any;
     }): Promise<any>;
@@ -707,37 +707,37 @@ export declare class TinderClient {
     verifyEmail({ otp }: {
         otp: any;
     }): Promise<any>;
-    pushDevices(): Promise<unknown>;
-    profileData(): Promise<string>;
-    getMatches(): Promise<string>;
+    pushDevices(): Promise<any>;
+    profileData(): Promise<any>;
+    getMatches(): Promise<any>;
     useEmail({ email }: {
         email: any;
     }): Promise<any>;
-    startOnboarding(): Promise<unknown>;
+    startOnboarding(): Promise<any>;
     setName({ name }: {
         name: any;
-    }): Promise<unknown>;
+    }): Promise<any>;
     setBirthDate({ birthDate }: {
         birthDate: any;
-    }): Promise<unknown>;
+    }): Promise<any>;
     setGender({ gender }: {
         gender: any;
-    }): Promise<unknown>;
+    }): Promise<any>;
     setInterestedInGender({ gender }: {
         gender: any;
-    }): Promise<unknown>;
+    }): Promise<any>;
     setSchool({ schoolId, name, displayed }: {
         schoolId: any;
         name: any;
         displayed: any;
-    }): Promise<unknown>;
+    }): Promise<any>;
     photo({ data }: {
         data: any;
-    }): Promise<unknown>;
+    }): Promise<any>;
     setInterests({ interests }: {
         interests: any;
-    }): Promise<unknown>;
-    healthCheckAuth(): Promise<unknown>;
+    }): Promise<any>;
+    healthCheckAuth(): Promise<any>;
     static fromObject(o: any): TinderClient;
     toObject(): {
         userId: string;
@@ -868,7 +868,7 @@ export declare class TinderClient {
     purchaseDiscountEligibility(o: any): Promise<IDataResponse>;
     profileTutorials(o: any): Promise<any>;
     profileSpotifySync(o: IConnectSpotifyRequest): Promise<IDataResponse>;
-    readreceiptMatchId(o: any): Promise<import("node-fetch").Response>;
+    readreceiptMatchId(o: any): Promise<any>;
     exploreRecs(o: any): Promise<ICuratedRecsResponse>;
     purchaseDiscountSponsoredMessage(o: any): Promise<IDataResponse>;
     fastMatchCount(o: any): Promise<IFastMatchCountResponse>;
@@ -935,14 +935,14 @@ export declare class TinderClient {
     giphyTrending(o: any): Promise<IGiphyApiResponse>;
     tenorTrending(o: any): Promise<ITenorApiResponse>;
     profileConsentsMessage(o: IMessageConsentRequestBody): Promise<IMessageConsentResponse>;
-    profileUser(o: IOnlinePresenceSettingsUpdateRequestBody): Promise<import("node-fetch").Response>;
+    profileUser(o: IOnlinePresenceSettingsUpdateRequestBody): Promise<any>;
     profileSchool(o: IUpdateSchoolRequestBody): Promise<IUpdateSchoolResponse>;
     profileTinderu(o: ITinderUProfileRequestBody): Promise<ITinderUResponse>;
     promosValidate(o: IPurchasePromotionsValidateRequest): Promise<IPurchasePromotionsValidateResponse>;
     purchaseAndroid(o: any): Promise<any>;
     tinderuVerify(o: IVerifyRequest): Promise<ITinderUResponse>;
     healthcheckAuth(o: any): Promise<IHealthcheckResponse>;
-    challengeVerify(o: IChallengeAnswerVerificationRequest): Promise<import("node-fetch").Response>;
+    challengeVerify(o: IChallengeAnswerVerificationRequest): Promise<any>;
     verificationUnderageState(o: any): Promise<IDataResponse>;
     verificationUnderageUrl(o: any): Promise<IVerificationUrlResponse>;
     boostResult(o: any): Promise<any>;

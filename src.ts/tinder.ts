@@ -60,7 +60,7 @@ interface ICreditCardPurchaseResponse {
   pa_request?: string;
   identify?: string;
 }
-interface IDeleteCreditCardResponse { }
+interface IDeleteCreditCardResponse {}
 interface ICurrentCardInfoResponse {
   card?: string;
   variant?: string;
@@ -155,7 +155,7 @@ interface IProfileShareFriendsListResponseFriend {
   name?: string;
   thumbnail?: string;
 }
-interface IDataResponse { }
+interface IDataResponse {}
 interface ISingleCampaignResponse {
   data?: string;
 }
@@ -168,7 +168,7 @@ interface INotificationReadStatusResponse {
 interface INotificationListResponse {
   data?: string;
 }
-interface IOpenedNotificationBody { }
+interface IOpenedNotificationBody {}
 interface ICampaignViewedBody {
   campaignId?: string;
   type?: string;
@@ -195,7 +195,7 @@ interface IAgeVerificationResponse {
   url?: string;
   expiration_ts?: string;
 }
-interface IMultipartBodyPart { }
+interface IMultipartBodyPart {}
 interface ISubmittedMediaUploadResponse {
   hash?: string;
 }
@@ -210,7 +210,7 @@ interface IMetaRequestBody {
 interface IMetaDataResponse {
   data?: string;
 }
-interface IMMRegistrationRequest { }
+interface IMMRegistrationRequest {}
 interface IMMSessionRegistrationResponse {
   invitation_id?: string;
   is_new_matchmaking_session?: string;
@@ -225,8 +225,8 @@ interface IMutualsProfileResponse {
 interface IMutualsSettingsResponse {
   data?: string;
 }
-interface IMutualsFeatureStateResponse { }
-interface IContactUploadResponse { }
+interface IMutualsFeatureStateResponse {}
+interface IContactUploadResponse {}
 interface IAutoCompleteResponse {
   results?: AutoCompleteSuggestion[];
 }
@@ -236,8 +236,8 @@ interface IAutoCompleteSuggestion {
   country?: string;
   formatting?: ApiFormatting[];
 }
-interface ICompleteUserRequest { }
-interface IFieldsResponse { }
+interface ICompleteUserRequest {}
+interface IFieldsResponse {}
 interface IUpdateFieldsRequestField {
   name: string;
   data: IUpdateFieldsRequestFieldData;
@@ -254,8 +254,8 @@ interface IUpdateFieldsRequest {
 interface IMatchesPresenceResponse {
   data?: string;
 }
-interface ILocationResponse { }
-interface IGetUserReportingTreeResponseMapValue { }
+interface ILocationResponse {}
+interface IGetUserReportingTreeResponseMapValue {}
 interface IVideoChatConsentResponse {
   data?: string;
 }
@@ -400,7 +400,7 @@ interface IImageUploadResponse {
   assets?: Photo[];
   client_photo_id?: string;
 }
-interface IPhoto { }
+interface IPhoto {}
 interface IVideoUploadResponse {
   assets?: Photo[];
   videos_processing?: ProcessingVideo[];
@@ -416,13 +416,13 @@ interface IAddThirdPartyPhotoBody {
   transmit?: string;
   assets?: Asset[];
 }
-interface IAsset { }
+interface IAsset {}
 interface IAddThirdPartyPhotoResponse {
   assets?: Photo[];
 }
-interface ITinderUResponse { }
-interface ITinderUSheerIdRequest { }
-interface ITinderUSheerIdResponse { }
+interface ITinderUResponse {}
+interface ITinderUSheerIdRequest {}
+interface ITinderUSheerIdResponse {}
 interface IInstagramAuthRequestBody {
   code?: string;
 }
@@ -436,7 +436,7 @@ interface IConnectSpotifyRequest {
 interface IDeleteSuperLikeResponse {
   super_likes?: string;
 }
-interface ICuratedRecsResponse { }
+interface ICuratedRecsResponse {}
 interface IFastMatchCountResponse {
   data?: string;
   meta?: string;
@@ -445,38 +445,38 @@ interface IFastMatchFilteredRecsRequestBody {
   filter?: string;
   page_token?: string;
 }
-interface IFastMatchRecsResponse { }
-interface IFastMatchPreviewResponse { }
+interface IFastMatchRecsResponse {}
+interface IFastMatchPreviewResponse {}
 interface IInstagramAuthUrlResponse {
   ig_auth_url?: string;
 }
 interface IFastMatchNewCountResponse {
   new_count_token?: string;
 }
-interface IRecsResponse { }
-interface ISecretAdmirerResponse { }
+interface IRecsResponse {}
+interface ISecretAdmirerResponse {}
 interface IMediaIdsBody {
   num_pending_media?: string;
 }
 interface IMediaIdsResponse {
   media_ids?: string[];
 }
-interface ICampaignResponse { }
-interface ICrmSubscriptionResponse { }
+interface ICampaignResponse {}
+interface ICrmSubscriptionResponse {}
 interface IDeviceCheckResponse {
   nonce?: string;
   nonce_version?: string;
   action?: string;
 }
-interface IInstagramMediaResponse { }
+interface IInstagramMediaResponse {}
 interface ILikedUsersRecsResponse {
   page_token?: string;
 }
-interface IProfileV2Response { }
+interface IProfileV2Response {}
 interface IPromptsResponse {
   prompts?: Prompt[];
 }
-interface IPrompt { }
+interface IPrompt {}
 interface IApiSeriesResponse {
   series?: string;
 }
@@ -487,7 +487,7 @@ interface IShareLinkResponse {
   link?: string;
   share_text_v2?: string;
 }
-interface ISuperlikeStatusInfoResponse { }
+interface ISuperlikeStatusInfoResponse {}
 interface IThemeResponse {
   theme_id?: string;
   name?: string;
@@ -509,9 +509,9 @@ interface IUpdatesRequestBody {
   nudge?: string;
   last_activity_date?: string;
 }
-interface IUserResponse { }
-interface ILikeRatingRequest { }
-interface ILikeRatingResponse { }
+interface IUserResponse {}
+interface ILikeRatingRequest {}
+interface ILikeRatingResponse {}
 interface ITopPicksLikeRatingRequest {
   type?: string;
   top_picks?: string;
@@ -553,7 +553,7 @@ interface ISwipeSurgeResponse {
 interface IUsersRecommendedByEmailResponse {
   users?: User[];
 }
-interface IUser { }
+interface IUser {}
 interface IPurchaseDiscountViewedRequestById {
   discountId?: string;
 }
@@ -569,13 +569,13 @@ interface IMatchListResponse {
   matches?: ApiMatch[];
   next_page_token?: string;
 }
-interface IApiMatch { }
+interface IApiMatch {}
 interface IMessageListResponse {
   messages?: RawJson[];
   next_page_token?: string;
 }
-interface IRawJson { }
-interface IPassRatingResponse { }
+interface IRawJson {}
+interface IPassRatingResponse {}
 interface IApiJourneyBody {
   story_id?: string;
   journey_id?: string;
@@ -593,7 +593,7 @@ interface ISecretAdmirerRateRequest {
   uid?: string;
   type?: string;
 }
-interface ISecretAdmirerRateApiResponse { }
+interface ISecretAdmirerRateApiResponse {}
 interface IUpdateUsernameRequestBody {
   username?: string;
 }
@@ -620,7 +620,7 @@ interface IExperiencesUpdateRequestBody {
 interface IExperienceUpdateResponse {
   experiences?: string;
 }
-interface IGiphyApiResponse { }
+interface IGiphyApiResponse {}
 interface IPopularSpotifyTrackResponse {
   popular_on_spotify_playlist?: string;
 }
@@ -672,7 +672,7 @@ interface IPurchaseLogResponse {
 interface IOrderProfilePhotosBody {
   change_order?: MediaId[];
 }
-interface IMediaId { }
+interface IMediaId {}
 interface ITopPicksSuperlikeRatingRequest {
   type?: string;
   top_picks?: string;
@@ -699,7 +699,7 @@ interface ISuperLikeContentBody {
   room_id?: string;
   explore_catalog_id?: string;
 }
-interface ISuperLikeRatingResponse { }
+interface ISuperLikeRatingResponse {}
 interface IUpdateCardStackPreferenceRequestBody {
   preference_filters?: string;
 }
@@ -767,16 +767,16 @@ interface IProfileUserUpdateRequestBody {
   sexual_orientations?: SexualOrientation[];
   show_orientation_on_profile?: boolean;
 }
-interface ISexualOrientation { }
+interface ISexualOrientation {}
 interface IUpdateSchoolRequestBody {
   schools?: School[];
 }
-interface ISchool { }
-interface IUpdateSchoolResponse { }
+interface ISchool {}
+interface IUpdateSchoolResponse {}
 interface ISyncSwipeSettingsRequestBody {
   sync_swipe_enabled?: string;
 }
-interface ITinderUProfileRequestBody { }
+interface ITinderUProfileRequestBody {}
 interface IUserInterestsRequestBody {
   user_interests?: string;
 }
@@ -790,7 +790,7 @@ interface ISaveSelectedProfileDescriptorRequestBody {
 interface IPurchasePromotionsValidateRequest {
   identifier?: string;
 }
-interface IPurchasePromotionsValidateResponse { }
+interface IPurchasePromotionsValidateResponse {}
 interface IVerifyRequest {
   token?: string;
 }
@@ -808,7 +808,7 @@ interface IVerificationUrlResponse {
 interface IBoostRequest {
   amount?: string;
 }
-interface IBoostResponse { }
+interface IBoostResponse {}
 interface IBouncerBypassDataResponse {
   meta?: string;
   data?: string;
@@ -824,8 +824,8 @@ interface ICategoryApiResponse {
   recently_active?: string;
   featured?: string;
 }
-interface IConsentRequest { }
-interface IConsentResponse { }
+interface IConsentRequest {}
+interface IConsentResponse {}
 interface IConnectDataResponse {
   meta?: string;
   data?: string;
@@ -975,16 +975,17 @@ export class TinderClient {
     this.refreshToken =
       (this.constructor as any).getField(response, "refreshToken") ||
       this.refreshToken;
-    this.userId = (this.constructor as any).getField(response, "userId") || this.userId;
-    this.onboardingToken = (this.constructor as any).getField(
-      response,
-      "onboardingToken"
-    ) || this.onboardingToken;
-    this.token = (this.constructor as any).getField(
-      response,
-      "onboardingToken"
-    ) || this.token;
-    this.xAuthToken = (this.constructor as any).getField(response, "authToken") || this.xAuthToken;
+    this.userId =
+      (this.constructor as any).getField(response, "userId") || this.userId;
+    this.onboardingToken =
+      (this.constructor as any).getField(response, "onboardingToken") ||
+      this.onboardingToken;
+    this.token =
+      (this.constructor as any).getField(response, "onboardingToken") ||
+      this.token;
+    this.xAuthToken =
+      (this.constructor as any).getField(response, "authToken") ||
+      this.xAuthToken;
     if (
       typeof response?.loginResult !== "undefined" &&
       typeof response?.loginResult?.authTokenTtl !== "undefined"
@@ -1022,12 +1023,12 @@ export class TinderClient {
     if (this.xAuthToken) logData["X-Auth-Token"] = this.xAuthToken;
     if (this.getAppSessionTimeElapsed())
       logData["App-session-time-elapsed"] = String(
-        this.getAppSessionTimeElapsed().toFixed(3)
+        this.getAppSessionTimeElapsed().toFixed(3),
       );
     if (this.userSessionId) logData["User-session-id"] = this.userSessionId;
     if (this.getUserSessionTimeElapsed())
       logData["User-session-time-elapsed"] = String(
-        this.getUserSessionTimeElapsed()?.toFixed(3)
+        this.getUserSessionTimeElapsed()?.toFixed(3),
       );
     if (contentLength) logData["Content Length"] = contentLength;
     logData["Content Type"] =
@@ -1035,57 +1036,55 @@ export class TinderClient {
       "application/x-protobuf";
     logData["Accept-Encoding"] = "gzip";
 
-   
-  try{
-    return await fetch(url, {
-      ...config,
-      agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
-      compress: true,
-      method: config.method || "POST",
-      headers: {
-        ...(config.headers || {}),
-        token: this.token,
-        "appsflyer-id": this.appsFlyerId,
-        "advertising-id": this.advertisingId,
-        "funnel-session-id": this.funnelSessionId,
-        "user-agent": this.userAgent,
-        "os-version": this.osVersion,
-        "app-version": this.appVersion,
-        platform: this.platform,
-        "platform-variant": this.platformVariant,
-        "x-supported-image-formats": "webp",
-        "accept-language": this.language,
-        "tinder-version": this.tinderVersion,
-        "store-variant": this.storeVariant,
-        "x-auth-token": this.xAuthToken,
-        "persistent-device-id": this.persistentDeviceId,
-        "app-session-id": this.appSessionId,
-        "user-session-id": this.userSessionId,
-        "user-session-time-elapsed": this.getUserSessionTimeElapsed()
-          ? String(this.getUserSessionTimeElapsed()?.toFixed(3))
-          : null,
-        "app-session-time-elapsed": String(
-          this.getAppSessionTimeElapsed().toFixed(3)
-        ),
-        "install-id": this.installId,
-        "content-type":
-          (contentLength && (config.headers || {})["content-type"]) ||
-          "application/x-protobuf",
-        "content-length": contentLength || undefined,
-        "accept-encoding": "gzip",
-      },
-    });
-  }catch(e){
-     const trace = "An error occured while making a request to Tinder API"
-    const error ={
-      trace: trace,
-      error: e,
-      request: logData
-     }
-     throw new Error(JSON.stringify(error))
+    try {
+      return await fetch(url, {
+        ...config,
+        agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
+        compress: true,
+        method: config.method || "POST",
+        headers: {
+          ...(config.headers || {}),
+          token: this.token,
+          "appsflyer-id": this.appsFlyerId,
+          "advertising-id": this.advertisingId,
+          "funnel-session-id": this.funnelSessionId,
+          "user-agent": this.userAgent,
+          "os-version": this.osVersion,
+          "app-version": this.appVersion,
+          platform: this.platform,
+          "platform-variant": this.platformVariant,
+          "x-supported-image-formats": "webp",
+          "accept-language": this.language,
+          "tinder-version": this.tinderVersion,
+          "store-variant": this.storeVariant,
+          "x-auth-token": this.xAuthToken,
+          "persistent-device-id": this.persistentDeviceId,
+          "app-session-id": this.appSessionId,
+          "user-session-id": this.userSessionId,
+          "user-session-time-elapsed": this.getUserSessionTimeElapsed()
+            ? String(this.getUserSessionTimeElapsed()?.toFixed(3))
+            : null,
+          "app-session-time-elapsed": String(
+            this.getAppSessionTimeElapsed().toFixed(3),
+          ),
+          "install-id": this.installId,
+          "content-type":
+            (contentLength && (config.headers || {})["content-type"]) ||
+            "application/x-protobuf",
+          "content-length": contentLength || undefined,
+          "accept-encoding": "gzip",
+        },
+      });
+    } catch (e) {
+      const trace = "An error occured while making a request to Tinder API";
+      const error = {
+        trace: trace,
+        error: e,
+        request: logData,
+      };
+      throw new Error(JSON.stringify(error));
     }
   }
-
 
   async authLogin({ phoneNumber }) {
     this.appSessionStartTime = Date.now();
@@ -1098,7 +1097,7 @@ export class TinderClient {
             phone: phoneNumber,
           },
         }).finish(),
-      }
+      },
     );
     const decoded = Buffer.from(await (await response.blob()).arrayBuffer());
     return protocol.AuthGatewayResponse.decode(decoded);
@@ -1116,10 +1115,10 @@ export class TinderClient {
             otp,
           },
         }).finish(),
-      }
+      },
     );
     const decoded = protocol.AuthGatewayResponse.decode(
-      Buffer.from(await (await response.blob()).arrayBuffer())
+      Buffer.from(await (await response.blob()).arrayBuffer()),
     );
     this.assignDecodedValues(decoded);
     return decoded;
@@ -1131,13 +1130,13 @@ export class TinderClient {
         method: "POST",
         body: protocol.AuthGatewayRequest.encode({
           refreshAuth: {
-            refreshToken: this.refreshToken
-          }
+            refreshToken: this.refreshToken,
+          },
         }).finish(),
-      }
+      },
     );
     const decoded = protocol.AuthGatewayResponse.decode(
-      Buffer.from(await (await response.blob()).arrayBuffer())
+      Buffer.from(await (await response.blob()).arrayBuffer()),
     );
     this.assignDecodedValues(decoded);
     return decoded;
@@ -1164,10 +1163,10 @@ export class TinderClient {
             },
           },
         }).finish(),
-      }
+      },
     );
     const decoded = protocol.AuthGatewayResponse.decode(
-      Buffer.from(await (await response.blob()).arrayBuffer())
+      Buffer.from(await (await response.blob()).arrayBuffer()),
     );
     this.assignDecodedValues(decoded);
     return decoded;
@@ -1182,7 +1181,7 @@ export class TinderClient {
           app_id: "com.tinder",
           push_notification_version: 2,
         },
-      }
+      },
     );
     return response.json();
   }
@@ -1192,7 +1191,7 @@ export class TinderClient {
       "https://api.gotinder.com/v2/profile?include=offerings%2Cfeature_access%2Caccount%2Cuser%2Cboost%2Ccampaigns%2Ccompliance%2Cemail_settings%2Cexperiences%2Cinstagram%2Clikes%2Cnotifications%2Conboarding%2Ctravel%2Cplus_control%2Cpurchase%2Creadreceipts%2Cspotify%2Csuper_likes%2Ctinder_u%2Ctop_photo%2Ctutorials%2Conboarding%2Cavailable_descriptors%2Cprofile_meter",
       {
         method: "GET",
-      }
+      },
     );
     return response.text();
   }
@@ -1201,7 +1200,7 @@ export class TinderClient {
       "https://api.gotinder.com/v2/matches?count=100",
       {
         method: "GET",
-      }
+      },
     );
     return response.text();
   }
@@ -1219,10 +1218,10 @@ export class TinderClient {
             },
           },
         }).finish(),
-      }
+      },
     );
     const decoded = protocol.AuthGatewayResponse.decode(
-      Buffer.from(await (await response.blob()).arrayBuffer())
+      Buffer.from(await (await response.blob()).arrayBuffer()),
     );
     this.assignDecodedValues(decoded);
     return decoded;
@@ -1248,7 +1247,7 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
@@ -1262,7 +1261,7 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
@@ -1278,7 +1277,7 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
@@ -1298,7 +1297,7 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
@@ -1320,7 +1319,7 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
@@ -1344,14 +1343,26 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
   async photo({ data }) {
     const filename = v1();
     const boundary = v1();
-    const payload = Buffer.concat([Buffer.from('--' + boundary + '\r\n' + 'Content-Disposition: form-data; name="photo"; filename="' + filename + '"\r\nContent-Type: image/jpeg\r\nContent-Length: ' + String(data.length) + '\r\n\r\n'), data]);
+    const payload = Buffer.concat([
+      Buffer.from(
+        "--" +
+          boundary +
+          "\r\n" +
+          'Content-Disposition: form-data; name="photo"; filename="' +
+          filename +
+          '"\r\nContent-Type: image/jpeg\r\nContent-Length: ' +
+          String(data.length) +
+          "\r\n\r\n",
+      ),
+      data,
+    ]);
     return (
       await this._call(
         "https://api.gotinder.com/v2/onboarding/photo?requested=tinder_rules&requested=name&requested=birth_date&requested=gender&requested=custom_gender&requested=show_gender_on_profile&requested=photos&requested=email&requested=allow_email_marketing&requested=consents&requested=schools&requested=interested_in_gender&requested=show_same_orientation_first&requested=show_orientation_on_profile&requested=sexual_orientations&requested=user_interests&requested=relationship_intent&requested=distance_filter",
@@ -1361,9 +1372,9 @@ export class TinderClient {
           headers: {
             token: this.onboardingToken,
             "content-type": "multipart/form-data; boundary=" + boundary,
-            "content-length": String(payload.length)
+            "content-length": String(payload.length),
           },
-        }
+        },
       )
     ).json();
   }
@@ -1391,7 +1402,7 @@ export class TinderClient {
           token: this.onboardingToken,
           "content-type": "application/json; charset=UTF-8",
         },
-      }
+      },
     );
     return await response.json();
   }
@@ -1414,7 +1425,7 @@ export class TinderClient {
           "persistent-device-id": this.persistentDeviceId,
           "app-session-id": this.appSessionId,
           "app-session-time-elapsed": String(
-            this.getAppSessionTimeElapsed().toFixed(3)
+            this.getAppSessionTimeElapsed().toFixed(3),
           ),
           "install-id": this.installId,
           "encoded-device-model": this.encodedDeviceModel,
@@ -1468,40 +1479,40 @@ export class TinderClient {
   async purchasePaymentCard(o: IAddNewCardRequest): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/payment/card",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseCcPidCancel(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/cc/{pid}/cancel",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseCcPidAutoRenew(o: any): Promise<ICreditCardPurchaseResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/cc/{pid}/auto-renew",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchasePaymentLatest(o: any): Promise<ICurrentCardInfoResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/payment/latest",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseCcTaxZipCode(o: IPricingRequest): Promise<IPricingResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/cc/tax/{zip_code}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseCc(
-    o: ICreditCardPurchaseRequest
+    o: ICreditCardPurchaseRequest,
   ): Promise<ICreditCardPurchaseResponse> {
     const response = await this._call("https://api.gotinder.com/purchase/cc", {
       method: "POST",
@@ -1510,177 +1521,177 @@ export class TinderClient {
     return await response.json();
   }
   async purchaseCc3d(
-    o: IThreeDSAuthApiRequestChallengeShopperRequest
+    o: IThreeDSAuthApiRequestChallengeShopperRequest,
   ): Promise<IThreeDSAuthApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/cc/3d",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseCcRestore(o: any): Promise<IRestorePurchaseResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/cc/restore",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async experiencesHighlights(o: any): Promise<IHighlightsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/experiences/highlights",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileIncludeUserAvailableDescriptors(
-    o: any
+    o: any,
   ): Promise<IHeightDescriptorResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile?include=user,available_descriptors",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileUserIncludeUser(
-    o: ISaveHeightRequest
+    o: ISaveHeightRequest,
   ): Promise<IHeightDescriptorResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/user?include=user",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async userinterestsSearch(o: any): Promise<IUserInterestsSearchResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/userinterests/search",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async friendsRequestGenerate(
-    o: IProfileShareFriendRequestResponse
+    o: IProfileShareFriendRequestResponse,
   ): Promise<IProfileShareFriendRequestResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/friends/request/generate",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async friendsAll(o: any): Promise<IProfileShareFriendsListResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/friends/all",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async insendioTemplatesActive(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/insendio/templates/active",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async insendioCampaignsRawId(o: any): Promise<ISingleCampaignResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/insendio/campaigns/{rawId}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async insendioCampaigns(o: any): Promise<ICampaignsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/insendio/campaigns",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async notifications(o: any): Promise<INotificationListResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/notifications",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async notificationsNotificationTimestamp(
-    o: IOpenedNotificationBody
+    o: IOpenedNotificationBody,
   ): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/notifications/{notificationTimestamp}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async insendioCampaignsView(o: ICampaignViewedBody): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/insendio/campaigns/view",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async insendioCampaignsCampaignIdSubmit(o: IAnswerBody): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/insendio/campaigns/{campaignId}/submit",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async notificationsRead(
-    o: IUpdateNotificationReadStatusBody
+    o: IUpdateNotificationReadStatusBody,
   ): Promise<INotificationReadStatusResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/notifications/read",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async soterRecsRoomId(o: any): Promise<IDionysusRecsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/soter/recs/{room_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async dynamicuiConfigurationContent(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/dynamicui/configuration/content",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async authAccountRecovery(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v3/auth/account_recovery",
-      { method: "POST", body: protocol.AuthGatewayRequest.encode(o).finish() }
+      { method: "POST", body: protocol.AuthGatewayRequest.encode(o).finish() },
     );
     return response;
   }
   async authPhoneUpdate(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v3/auth/phone_update",
-      { method: "POST", body: protocol.AuthGatewayRequest.encode(o).finish() }
+      { method: "POST", body: protocol.AuthGatewayRequest.encode(o).finish() },
     );
     return response;
   }
   async verificationUnderageJpStatus(
-    o: IAgeVerificationRequest
+    o: IAgeVerificationRequest,
   ): Promise<IAgeVerificationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/verification/underage/jp/status",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async verificationUnderageGlobal(o: any): Promise<IAgeVerificationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/verification/underage/global",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async ageVerificationUrl(o: any): Promise<IAgeVerificationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/1.0/age-verification/url",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -1690,7 +1701,7 @@ export class TinderClient {
       {
         method: "POST",
         body: protocol.AppEventPublishRequest.encode(o).finish(),
-      }
+      },
     );
     return response;
   }
@@ -1700,7 +1711,7 @@ export class TinderClient {
       {
         method: "POST",
         body: protocol.CreatePlaceholderRequest.encode(o).finish(),
-      }
+      },
     );
     return protocol.null.decode(await (await response.blob()).arrayBuffer());
   }
@@ -1710,7 +1721,7 @@ export class TinderClient {
       {
         method: "POST",
         body: protocol.UpdatePhotoAvatarRequest.encode(o).finish(),
-      }
+      },
     );
     return protocol.null.decode(await (await response.blob()).arrayBuffer());
   }
@@ -1720,274 +1731,291 @@ export class TinderClient {
       {
         method: "POST",
         body: protocol.UpdateMediaDetailsRequest.encode(o).finish(),
-      }
+      },
     );
     return protocol.null.decode(await (await response.blob()).arrayBuffer());
   }
   async mediaserviceOrder(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/mediaservice/order",
-      { method: "POST", body: protocol.OrderMediaRequest.encode(o).finish() }
+      { method: "POST", body: protocol.OrderMediaRequest.encode(o).finish() },
     );
     return protocol.null.decode(await (await response.blob()).arrayBuffer());
   }
   async mediaserviceLoop(o: IMultipartBodyPart): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/mediaservice/loop",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async mediaservicePhoto(o: IMultipartBodyPart): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/mediaservice/photo",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async mediaserviceVideo(o: IMultipartBodyPart): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/mediaservice/video",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async mediaSubmit(
-    o: IMultipartBodyPart
+    o: IMultipartBodyPart,
   ): Promise<ISubmittedMediaUploadResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/media/submit",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async suggestions(o: any): Promise<IApiMessageSuggestionsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/suggestions",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async messageSuggestions(o: any): Promise<IApiMessageSuggestionsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/message-suggestions",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async meta(o: IMetaRequestBody): Promise<any> {
     let payload;
-    if (!Object.keys(o).length) payload = {
-      force_fetch_resources: true,
-      lat: 41.5074027,
-      lon: -71.8992217
-    };
+    if (!Object.keys(o).length)
+      payload = {
+        force_fetch_resources: true,
+        lat: 41.5074027,
+        lon: -71.8992217,
+      };
     else {
       payload = {
         force_fetch_resources: o.forceFetchResources || true,
-        lat: o.lat && Number(o.lat) || 41.5074027,
-        lon: o.lon && Number(o.lon) || -71.8992217
+        lat: (o.lat && Number(o.lat)) || 41.5074027,
+        lon: (o.lon && Number(o.lon)) || -71.8992217,
       };
     }
     const response = await this._call("https://api.gotinder.com/v2/meta", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
-        'content-type': 'application/json; charset=UTF-8'
-      }
+        "content-type": "application/json; charset=UTF-8",
+      },
     });
     return response;
   }
   async matchmakerRegistration(
-    o: IMMRegistrationRequest
+    o: IMMRegistrationRequest,
   ): Promise<IMMSessionRegistrationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/matchmaker/registration",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileMutuals(o: any): Promise<IMutualsProfileResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/mutuals",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileIncludeUser(o: any): Promise<IMutualsSettingsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile?include=user",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async userconnectionsContacts(o: any): Promise<IContactUploadResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v3/userconnections/contacts",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async onboardingAutocomplete(o: any): Promise<IAutoCompleteResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/onboarding/autocomplete",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async onboardingComplete(o: ICompleteUserRequest): Promise<IDataResponse> {
-    if (!Object.keys(o).length) o = {
-      fields: [{ data: { max_age: (o as any).maxAge || 41, min_age: (o as any).minAge || 18 }, name: 'age_settings' }]
-    };
+    if (!Object.keys(o).length)
+      o = {
+        fields: [
+          {
+            data: {
+              max_age: (o as any).maxAge || 41,
+              min_age: (o as any).minAge || 18,
+            },
+            name: "age_settings",
+          },
+        ],
+      };
     const response = await this._call(
       "https://api.gotinder.com/v2/onboarding/complete",
-      { method: "POST", body: JSON.stringify(o), headers: { token: this.onboardingToken, 'content-type': 'application/json; charset=UTF-8' } }
+      {
+        method: "POST",
+        body: JSON.stringify(o),
+        headers: {
+          token: this.onboardingToken,
+          "content-type": "application/json; charset=UTF-8",
+        },
+      },
     );
     return await response.json();
   }
   async onboardingUser(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/onboarding/user",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async onboardingFields(o: IUpdateFieldsRequest): Promise<IFieldsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/onboarding/fields",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async onboardingPhoto(o: IMultipartBodyPart): Promise<IFieldsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/onboarding/photo",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async matchesPresence(o: any): Promise<IMatchesPresenceResponse> {
     const response = await this._call(
       "https://api.gotinder.com/matches/presence",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async locationSearch(o: any): Promise<ILocationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/location/search",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async tokengatewayPushSend(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/tokengateway/push/send",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async roomserviceBlockRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/block/{room_id}",
-      { method: "POST", body: protocol.BlockUserRequest.encode(o).finish() }
+      { method: "POST", body: protocol.BlockUserRequest.encode(o).finish() },
     );
     return protocol.any.decode(await (await response.blob()).arrayBuffer());
   }
   async roomserviceRoom(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/room",
-      { method: "POST", body: protocol.CreateRoomRequest.encode(o).finish() }
+      { method: "POST", body: protocol.CreateRoomRequest.encode(o).finish() },
     );
     return response;
   }
   async roomserviceEndRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/end/{room_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async roomserviceJoinRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/join/{room_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async roomserviceLeaveRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/leave/{room_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async roomserviceRooms(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/rooms",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async roomserviceReportRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/report/{room_id}",
-      { method: "POST", body: protocol.ReportRoomRequest.encode(o).finish() }
+      { method: "POST", body: protocol.ReportRoomRequest.encode(o).finish() },
     );
     return protocol.any.decode(await (await response.blob()).arrayBuffer());
   }
   async roomserviceStatusRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/status/{room_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async roomserviceRoomRoomId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/roomservice/room/{room_id}",
-      { method: "POST", body: protocol.UpdateRoomRequest.encode(o).finish() }
+      { method: "POST", body: protocol.UpdateRoomRequest.encode(o).finish() },
     );
     return protocol.RoomServiceResponse.decode(
-      await (await response.blob()).arrayBuffer()
+      await (await response.blob()).arrayBuffer(),
     );
   }
   async v4ReportTree(o: any): Promise<IGetUserReportingTreeResponseMapValue> {
     const response = await this._call(
       "https://api.gotinder.com/v4/report/tree",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async v4ReportNew(o: any): Promise<IGetUserReportingTreeResponseMapValue> {
     const response = await this._call(
       "https://api.gotinder.com/v4/report/new",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async initiateVideoMatchId(
-    o: IStartVideoChatRequest
+    o: IStartVideoChatRequest,
   ): Promise<IStartVideoChatResponse> {
     const response = await this._call(
       "https://api.gotinder.com/initiate_video/{match_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async videoCallStatusMatchId(
-    o: IUpdateVideoChatConsentRequest
+    o: IUpdateVideoChatConsentRequest,
   ): Promise<IVideoChatConsentResponse> {
     const response = await this._call(
       "https://api.gotinder.com/video_call_status/{match_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async gamesConfiguration(o: any): Promise<IGetGamesConfigurationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/games/configuration",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2001,148 +2029,148 @@ export class TinderClient {
   async gamesMove(o: IPostGamesMoveRequest): Promise<IGamesResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/games/move",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async suggestionsDismissal(o: IPutSuggestionsDismissalRequest): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/suggestions/dismissal",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async surefireReferral(o: IReferralRequest): Promise<IReferralResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/surefire/referral",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async chatRooms(o: any): Promise<IGetChatRoomResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/chat-rooms",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async chatRoomsRegistration(
-    o: IChatRoomRegistrationRequest
+    o: IChatRoomRegistrationRequest,
   ): Promise<IChatRoomRegistrationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/chat-rooms/registration",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async chatRoomsInteractions(
-    o: IPostChatRoomInteractionRequest
+    o: IPostChatRoomInteractionRequest,
   ): Promise<IGetChatRoomInteractionsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/chat-rooms/interactions",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async vendorUserTokensGarboUrl(o: any): Promise<IGarboUrlResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/vendor-user-tokens/garbo/url",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async safetyCenterIndexJson(
-    o: any
+    o: any,
   ): Promise<IGetSafetyCenterContentResponse> {
     const response = await this._call(
       "https://api.gotinder.com/safety-center/index.json",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async matchSettingsSelfieVerificationMatchId(
-    o: IRequestVerificationResponse
+    o: IRequestVerificationResponse,
   ): Promise<IRequestVerificationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/match-settings/selfie-verification/{matchId}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async verificationFacemapClientKeys(
-    o: any
+    o: any,
   ): Promise<IFacetecKeyChainResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/verification/facemap/client-keys",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async verificationFacemapSessionToken(
-    o: any
+    o: any,
   ): Promise<IFacetecSessionTokenResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/verification/facemap/session-token",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async verificationSelfieStart(
-    o: any
+    o: any,
   ): Promise<IStartSelfieVerificationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/verification/selfie/start",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async verificationFacemapPhotoMatch(o: any): Promise<IFaceScanResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/verification/facemap/photo-match",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async accountRecoverySend(
-    o: IRequestAccountRecoveryLinkBody
+    o: IRequestAccountRecoveryLinkBody,
   ): Promise<IRequestAccountRecoveryLinkResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/account/recovery/send",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async authSmsSend(
-    o: IRequestOneTimePasswordBody
+    o: IRequestOneTimePasswordBody,
   ): Promise<IRequestOneTimePasswordResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/auth/sms/send",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async accountRecoveryConfirm(
-    o: IVerifyAccountRecoveryLinkBody
+    o: IVerifyAccountRecoveryLinkBody,
   ): Promise<IVerifyAccountRecoveryLinkResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/account/recovery/confirm",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async authSmsValidate(
-    o: IVerifyOneTimePasswordBody
+    o: IVerifyOneTimePasswordBody,
   ): Promise<IVerifyOneTimePasswordResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/auth/sms/validate",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async androidTrackerId(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/{android_tracker_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2156,14 +2184,14 @@ export class TinderClient {
   async dynamicuiTappycontent(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/dynamicui/tappycontent",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async imageFirst1(o: IMultipartBodyPart): Promise<IImageUploadResponse> {
     const response = await this._call(
       "https://api.gotinder.com/image?first=1",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2191,154 +2219,161 @@ export class TinderClient {
   async userShareLinkId(o: any): Promise<IAcceptFriendMatchInviteResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/user/share/{linkId}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async tinderuApply(o: any): Promise<ITinderUResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/tinderu/apply",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async tinderuApplyForm(
-    o: ITinderUSheerIdRequest
+    o: ITinderUSheerIdRequest,
   ): Promise<ITinderUSheerIdResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/tinderu/apply/form",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async instagramAuthenticate(
-    o: IInstagramAuthRequestBody
+    o: IInstagramAuthRequestBody,
   ): Promise<IInstagramAuthResponse> {
     const response = await this._call(
       "https://api.gotinder.com/instagram/authenticate",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseDiscountEligibility(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/purchase/discount/eligibility",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileTutorials(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/tutorials",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileSpotifySync(o: IConnectSpotifyRequest): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/spotify/sync",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async readreceiptMatchId(o: any) {
     const response = await this._call(
       "https://api.gotinder.com/v2/readreceipt/{match_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response;
   }
   async exploreRecs(o: any): Promise<ICuratedRecsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/explore/recs",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseDiscountSponsoredMessage(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/purchase/discount/sponsored-message",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async fastMatchCount(o: any): Promise<IFastMatchCountResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match/count",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async fastMatch(
-    o: IFastMatchFilteredRecsRequestBody
+    o: IFastMatchFilteredRecsRequestBody,
   ): Promise<IFastMatchRecsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async fastMatchTeaser(o: any): Promise<IFastMatchPreviewResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match/teaser",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async fastMatchTeasers(o: any): Promise<IFastMatchRecsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match/teasers",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async instagramAuthorize(o: any): Promise<IInstagramAuthUrlResponse> {
     const response = await this._call(
       "https://api.gotinder.com/instagram/authorize",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async fastMatchNewcount(o: any): Promise<IFastMatchNewCountResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match/newcount",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async recsCore(o: any): Promise<IRecsResponse> {
-    const response = await fetch("https://api.gotinder.com/v2/recs/core?locale=en&distance_setting=mi", {
-      method: "GET",
-      headers: {
-        'support-short-video': String(1),
-        'connection-speed': String(1112),
-        'user-agent': this.userAgent,
-        'os-version': this.osVersion,
-        'app-version': this.appVersion,
-        platform: this.platform,
-        'platform-variant': this.platformVariant,
-        'x-supported-image-formats': 'webp',
-        'accept-language': this.language,
-        'tinder-version': this.tinderVersion,
-        'store-variant': this.storeVariant,
-        'x-auth-token': this.xAuthToken,
-        'persistent-device-id': this.persistentDeviceId,
-        'app-session-id': this.appSessionId,
-        'app-session-time-elapsed': String(this.getAppSessionTimeElapsed().toFixed(3)),
-        'user-session-id': this.userSessionId,
-        'user-session-time-elapsed': String(this.getUserSessionTimeElapsed()?.toFixed(3)),
-        'install-id': this.installId,
-        'accept-encoding': 'gzip'
+    const response = await fetch(
+      "https://api.gotinder.com/v2/recs/core?locale=en&distance_setting=mi",
+      {
+        method: "GET",
+        headers: {
+          "support-short-video": String(1),
+          "connection-speed": String(1112),
+          "user-agent": this.userAgent,
+          "os-version": this.osVersion,
+          "app-version": this.appVersion,
+          platform: this.platform,
+          "platform-variant": this.platformVariant,
+          "x-supported-image-formats": "webp",
+          "accept-language": this.language,
+          "tinder-version": this.tinderVersion,
+          "store-variant": this.storeVariant,
+          "x-auth-token": this.xAuthToken,
+          "persistent-device-id": this.persistentDeviceId,
+          "app-session-id": this.appSessionId,
+          "app-session-time-elapsed": String(
+            this.getAppSessionTimeElapsed().toFixed(3),
+          ),
+          "user-session-id": this.userSessionId,
+          "user-session-time-elapsed": String(
+            this.getUserSessionTimeElapsed()?.toFixed(3),
+          ),
+          "install-id": this.installId,
+          "accept-encoding": "gzip",
+        },
+        agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
+        compress: true,
       },
-      agent: this.proxyOptions && new SocksProxyAgent(this.proxyOptions),
-      compress: true
-    });
+    );
     return await response;
   }
   async fastMatchSecretAdmirer(o: any): Promise<ISecretAdmirerResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match/secret-admirer",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2352,14 +2387,14 @@ export class TinderClient {
   async profileAutocomplete(o: any): Promise<IAutoCompleteResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/autocomplete",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async campaignsCampaignId(o: any): Promise<ICampaignResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/campaigns/{campaign_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2373,35 +2408,35 @@ export class TinderClient {
   async subscriptionsTopic(o: any): Promise<ICrmSubscriptionResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/subscriptions/{topic}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async deviceCheckAndroid(o: any): Promise<IDeviceCheckResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/device-check/android",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async experiences(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/experiences",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async inboxMessages(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/inbox/messages",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async instagramMedia(o: any): Promise<IInstagramMediaResponse> {
     const response = await this._call(
       "https://api.gotinder.com/instagram/media",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2415,14 +2450,14 @@ export class TinderClient {
   async matchesMatchId(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/matches/{match_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async locationPopular(o: any): Promise<ILocationResponse> {
     const response = await this._call(
       "https://api.gotinder.com/location/popular",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2436,49 +2471,49 @@ export class TinderClient {
   async crmapiPrompts(o: any): Promise<IPromptsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/crmapi/prompts",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async rosettaLocalization(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/rosetta/localization",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async experiencesSeries(o: any): Promise<IApiSeriesResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/experiences/series",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async userUserIdShare(o: IShareLinkRequestBody): Promise<IShareLinkResponse> {
     const response = await this._call(
       "https://api.gotinder.com/user/{user_id}/share",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async metaSuperlikeInfo(o: any): Promise<ISuperlikeStatusInfoResponse> {
     const response = await this._call(
       "https://api.gotinder.com/meta/superlike/info",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async themesThemeId(o: any): Promise<IThemeResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/themes/{theme_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async themesBatch(o: any): Promise<IThemeBatchResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/themes/batch",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2492,58 +2527,58 @@ export class TinderClient {
   async userUserId(o: any): Promise<IUserResponse> {
     const response = await this._call(
       "https://api.gotinder.com/user/{user_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
 
   async topPicksRate(
-    o: ITopPicksLikeRatingRequest
+    o: ITopPicksLikeRatingRequest,
   ): Promise<ITopPicksLikeRatingResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/top-picks/rate",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async liveCount(o: any): Promise<ILiveCountsResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/live-count",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async surgeUser(o: any): Promise<ISwipeSurgeResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/surge/user",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async userRecommendedemailLinkId(
-    o: any
+    o: any,
   ): Promise<IUsersRecommendedByEmailResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/user/recommendedemail/{linkId}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseOfferView(
-    o: IPurchaseDiscountViewedRequestById
+    o: IPurchaseDiscountViewedRequestById,
   ): Promise<IPurchaseDiscountViewedResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/offer/view",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseDiscountView(
-    o: IPurchaseDiscountViewedRequestByTypeAndCampaign
+    o: IPurchaseDiscountViewedRequestByTypeAndCampaign,
   ): Promise<IPurchaseDiscountViewedResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/purchase/discount/view",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2557,141 +2592,148 @@ export class TinderClient {
   async matchesMatchIdMessages(o: any): Promise<IMessageListResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/matches/{match_id}/messages",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async passRecId(o: any): Promise<IPassRatingResponse> {
-    const response = await fetch(
-      "https://api.gotinder.com/pass/" + o.id + '?' + qs.stringify({ photoId: o.photoId, content_hash: o.content_hash, s_number: o.s_number }),
-      {
-        method: "GET", headers: {
-          'user-agent': this.userAgent,
-          'os-version': this.osVersion,
-          'app-version': this.appVersion,
-          platform: this.platform,
-          'platform-variant': this.platformVariant,
-          'x-supported-image-formats': 'webp',
-          'accept-language': this.language,
-          'tinder-version': this.tinderVersion,
-          'store-variant': this.storeVariant,
-          'x-auth-token': this.xAuthToken,
-          'persistent-device-id': this.persistentDeviceId,
-          'app-session-id': this.appSessionId,
-          'user-session-id': this.userSessionId,
-          'app-session-time-elapsed': String(this.getAppSessionTimeElapsed().toFixed(3)),
-          'user-session-time-elapsed': String(this.getUserSessionTimeElapsed()?.toFixed(3)),
-          'install-id': this.installId,
-          'accept-encoding': 'gzip'
-        }
-      }
-    );
+    const response = await fetch("https://api.gotinder.com/pass/" + o.id, {
+      method: "POST",
+      headers: {
+        "user-agent": this.userAgent,
+        "os-version": this.osVersion,
+        "app-version": this.appVersion,
+        platform: this.platform,
+        "platform-variant": this.platformVariant,
+        "x-supported-image-formats": "webp",
+        "accept-language": this.language,
+        "tinder-version": this.tinderVersion,
+        "store-variant": this.storeVariant,
+        "x-auth-token": this.xAuthToken,
+        "persistent-device-id": this.persistentDeviceId,
+        "app-session-id": this.appSessionId,
+        "user-session-id": this.userSessionId,
+        "app-session-time-elapsed": String(
+          this.getAppSessionTimeElapsed().toFixed(3),
+        ),
+        "user-session-time-elapsed": String(
+          this.getUserSessionTimeElapsed()?.toFixed(3),
+        ),
+        "install-id": this.installId,
+        "accept-encoding": "gzip",
+      },
+      body: JSON.stringify({
+        photoId: o.photoId,
+        content_hash: o.content_hash,
+        s_number: Number(o.s_number),
+      }),
+    });
     return await response.json();
   }
 
   async likeRecId(o: any): Promise<ILikeRatingResponse> {
-    const response = await this._call(
-      `https://api.gotinder.com/like/${o.id}`,
-      { method: "POST", body: JSON.stringify(o) }
-    );
-    
+    const response = await this._call(`https://api.gotinder.com/like/${o.id}`, {
+      method: "POST",
+      body: JSON.stringify(o),
+    });
+
     return await response;
   }
   async passportUserPrecheck(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/passport/user/precheck",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async campaignsEnable(
-    o: ICampaignPatchRequestBody
+    o: ICampaignPatchRequestBody,
   ): Promise<ICampaignResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/campaigns/enable",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async experiencesJourneys(
-    o: IApiJourneyBody
+    o: IApiJourneyBody,
   ): Promise<IApiUpdateJourneyResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/experiences/journeys",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async experiencesJourneysComplete(
-    o: IApiJourneyBody
+    o: IApiJourneyBody,
   ): Promise<IApiCompleteJourneyResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/experiences/journeys/complete",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async fastMatchSecretAdmirerRate(
-    o: ISecretAdmirerRateRequest
+    o: ISecretAdmirerRateRequest,
   ): Promise<ISecretAdmirerRateApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/fast-match/secret-admirer/rate",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileUsername(o: IUpdateUsernameRequestBody): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/profile/username",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseIac(o: IInAppCurrencyPurchaseRequestBody): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/purchase/iac",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async campaignsEventsRegister(
-    o: ICampaignEventRegistrationRequest
+    o: ICampaignEventRegistrationRequest,
   ): Promise<ICampaignResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/campaigns/events/register",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async experiencesJourneysStart(
-    o: IApiStartJourneyBody
+    o: IApiStartJourneyBody,
   ): Promise<IApiStartJourneyDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/experiences/journeys/start",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileSpotifyResync(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/spotify/resync",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileExperiences(
-    o: IExperiencesUpdateRequestBody
+    o: IExperiencesUpdateRequestBody,
   ): Promise<IExperienceUpdateResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/experiences",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profilePlusControl(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/plus_control",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2705,14 +2747,14 @@ export class TinderClient {
   async profileSpotifyPopular(o: any): Promise<IPopularSpotifyTrackResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/spotify/popular",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileSpotifySearch(o: any): Promise<ISearchSpotifyResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/spotify/search",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2724,25 +2766,25 @@ export class TinderClient {
     return await response.json();
   }
   async harassingmessagesMatchId(
-    o: ISendHarassingMessageDecisionRequestBody
+    o: ISendHarassingMessageDecisionRequestBody,
   ): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/v2/harassingmessages/{matchId}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async userMatchesMatchId(o: ISendMessageRequestBody): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/user/matches/{match_id}",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseLogs(o: IPurchaseLogRequest): Promise<IPurchaseLogResponse> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/logs",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2754,110 +2796,110 @@ export class TinderClient {
     return await response.json();
   }
   async likeRecIdSuper(
-    o: ISuperLikeContentBody
+    o: ISuperLikeContentBody,
   ): Promise<ISuperLikeRatingResponse> {
     const response = await this._call(
       "https://api.gotinder.com/like/{rec_id}/super",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async giphyTrending(o: any): Promise<IGiphyApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/giphy/trending",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async tenorTrending(o: any): Promise<ITenorApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/tenor/trending",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileConsentsMessage(
-    o: IMessageConsentRequestBody
+    o: IMessageConsentRequestBody,
   ): Promise<IMessageConsentResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/consents/message",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileUser(o: IOnlinePresenceSettingsUpdateRequestBody) {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/user",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response;
   }
   async profileSchool(
-    o: IUpdateSchoolRequestBody
+    o: IUpdateSchoolRequestBody,
   ): Promise<IUpdateSchoolResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/school",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileTinderu(
-    o: ITinderUProfileRequestBody
+    o: ITinderUProfileRequestBody,
   ): Promise<ITinderUResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/tinderu",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async promosValidate(
-    o: IPurchasePromotionsValidateRequest
+    o: IPurchasePromotionsValidateRequest,
   ): Promise<IPurchasePromotionsValidateResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/promos/validate",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async purchaseAndroid(o: any): Promise<any> {
     const response = await this._call(
       "https://api.gotinder.com/purchase/android",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async tinderuVerify(o: IVerifyRequest): Promise<ITinderUResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/tinderu/verify",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async healthcheckAuth(o: any): Promise<IHealthcheckResponse> {
     const response = await this._call(
       "https://api.gotinder.com/healthcheck/auth",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async challengeVerify(o: IChallengeAnswerVerificationRequest) {
     const response = await this._call(
       "https://api.gotinder.com/challenge/verify",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response;
   }
   async verificationUnderageState(o: any): Promise<IDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/verification/underage/state",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async verificationUnderageUrl(o: any): Promise<IVerificationUrlResponse> {
     const response = await this._call(
       "https://api.gotinder.com/verification/underage/url",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
@@ -2871,46 +2913,46 @@ export class TinderClient {
   async consumablesBouncerBypass(o: any): Promise<IBouncerBypassDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/consumables/bouncer-bypass",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async topPicksCategoryDiscovery(
-    o: any
+    o: any,
   ): Promise<ICategoryDiscoveryApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/top-picks-category/discovery",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async topPicksCategory(o: any): Promise<ICategoryApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/top-picks-category",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async topPicksCategoryPreview(o: any): Promise<ICategoryApiResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/top-picks-category/preview",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async profileConsents(o: IConsentRequest): Promise<IConsentResponse> {
     const response = await this._call(
       "https://api.gotinder.com/v2/profile/consents",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
   async connectIncludeIcebreakersMatchPrompts(
-    o: any
+    o: any,
   ): Promise<IConnectDataResponse> {
     const response = await this._call(
       "https://api.gotinder.com/connect?include=icebreakers,match_prompts",
-      { method: "POST", body: JSON.stringify(o) }
+      { method: "POST", body: JSON.stringify(o) },
     );
     return await response.json();
   }
