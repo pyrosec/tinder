@@ -2597,6 +2597,11 @@ export class TinderClient {
     return await response.json();
   }
   async passRecId(o: any): Promise<IPassRatingResponse> {
+    const body = JSON.stringify({
+      photoId: o.photoId,
+      content_hash: o.content_hash,
+      s_number: Number(o.s_number),
+    }, null, 2);
     const response = await fetch("https://api.gotinder.com/pass/" + o.id, {
       method: "POST",
       headers: {
@@ -2620,13 +2625,11 @@ export class TinderClient {
           this.getUserSessionTimeElapsed()?.toFixed(3),
         ),
         "install-id": this.installId,
+	"content-type": "application/json; charset=UTF-8",
+	"content-length": body.length,
         "accept-encoding": "gzip",
       },
-      body: JSON.stringify({
-        photoId: o.photoId,
-        content_hash: o.content_hash,
-        s_number: Number(o.s_number),
-      }),
+      body
     });
     return await response.json();
   }
